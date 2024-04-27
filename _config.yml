@@ -1,7 +1,7 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
+title: Seuunng Diary Project
+description: A simple, beautiful, and powerful diary for lazybones like me.
+url: https://seuunng.github.io
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
@@ -28,17 +28,16 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: seung-hee park
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/seuunng
+    - https://blog.naver.com/alldaytt
+    - www.youtube.com/@juumjump
+
 google_site_verification: xxxxx
-lang: en
+lang: ko
 
 sass:
   sass_dir: _sass

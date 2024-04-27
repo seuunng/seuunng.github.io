@@ -3,6 +3,15 @@ layout: page
 title: About
 ---
 
-**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
 
-For more information about Not Pure Poole, please browse the [README](https://github.com/vszhub/not-pure-poole) file.
+
+A **Diary for the Lazybones**: It Records Your Life for You
+
+This diary is **simple**. It automatically writes entries at a set time each day through a straightforward setup. Even if you forget to write after a tiring day, it’s okay.
+
+This diary is **beautiful**. You can customize nearly everything to your liking. Don’t worry if you’re not good at writing or decorating.
+
+This diary is **powerful**. It automatically logs almost everything you do on your phone as diary entries. Even if you have a lot to record, you won’t run out of time.
+
+Record your day with this diary and keep the memories alive.
+Even if you forget, this diary will remember for you.
