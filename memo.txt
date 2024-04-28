@@ -1,0 +1,8 @@
+
+cd /Users/seunghee/seuunng.github.io
+
+bundle update
+
+bundle install
+
+bundle exec jekyll serve

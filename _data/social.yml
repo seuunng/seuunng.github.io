@@ -1,9 +1,9 @@
-- title: Email
-  url: mailto://mnb2856@gmail.com
-  icon: fas fa-envelope
-- title: NaverBlog
-  url: https://blog.naver.com/alldaytt
-  icon: fab fa-twitter
 - title: GitHub
   url: https://github.com/seuunng
   icon: fab fa-github
+- title: NaverBlog
+  url: https://blog.naver.com/alldaytt
+  icon: fa-solid fa-blog
+- title: Youtube
+  url: https://www.youtube.com/@juumjump
+  icon: fab fa-youtube
