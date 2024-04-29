@@ -1,6 +1,6 @@
 # Setup
-title: Seuunng Diary Project
-description: A simple, beautiful, and powerful diary for lazybones like me.
+title: Seuunng Blog
+description: 
 url: https://seuunng.github.io
 avatar: /avatar.jpeg
 paginate: 5
@@ -30,7 +30,7 @@ exclude:
 # Optimize Jekyl SEO Tag
 logo: logo.png
 social:
-  name: seung-hee park
+  name: seuunng
   links:
     - https://github.com/seuunng
     - https://blog.naver.com/alldaytt
@@ -53,6 +53,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: seung-hee, park
+  name: seuunng
   url: https://github.com/seuunng/
   email: mnb2856@gmail.com
