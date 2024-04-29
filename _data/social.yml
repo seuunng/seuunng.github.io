@@ -1,9 +1,8 @@
 - title: GitHub
   url: https://github.com/seuunng
   icon: fab fa-github
-- title: NaverBlog
-  url: https://blog.naver.com/alldaytt
-  icon: fa-solid fa-blog
 - title: Youtube
   url: https://www.youtube.com/@juumjump
   icon: fab fa-youtube
+  
+  # 이메일 추가??
