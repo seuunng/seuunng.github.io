@@ -26,7 +26,7 @@
 {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"seung-hee, park","url":"https://github.com/seuunng/"},"description":"A simple, beautiful, and powerful diary for lazybones like me.","headline":"Categories","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"seung-hee, park"},"url":"http://localhost:4000/categories/"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Seuunng Diary Project" />
-</head>
+<link rel="icon" href="/favicon.png" type="image/x-icon"></head>
 
 
   <body>
@@ -41,6 +41,8 @@
     <small>A simple, beautiful, and powerful diary for lazybones like me.</small>
   </div><nav class="navigation">
     <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Project</a>
+      </li><li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Blog</a>
       </li><li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/about/">About</a>
@@ -50,10 +52,6 @@
       <li class="pure-menu-item">
           <a class="social-icon pure-menu-link" href="https://github.com/seuunng">
             <i class="fab fa-github" title="GitHub"></i>
-          </a>
-        </li><li class="pure-menu-item">
-          <a class="social-icon pure-menu-link" href="https://blog.naver.com/alldaytt">
-            <i class="fa-solid fa-blog" title="NaverBlog"></i>
           </a>
         </li><li class="pure-menu-item">
           <a class="social-icon pure-menu-link" href="https://www.youtube.com/@juumjump">
