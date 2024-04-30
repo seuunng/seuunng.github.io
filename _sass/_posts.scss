@@ -7,10 +7,16 @@
   border-bottom: 1px solid var(--border-color);
   margin-bottom: var(--spacer-3);
 }
-
+  .big-text {  //큰글씨
+    font-size: 20px;
+  }
+  .indent-text { //들여쓰기
+    padding-left: 20px;
+  }
 .page,
 .post {
   font-family: var(--text-font);
+  line-height: 1.8; /* 기본값보다 넓은 행간 */
   margin-bottom: 4em;
 
   h1, h2, h3, h4, h5, h6, .post-meta {

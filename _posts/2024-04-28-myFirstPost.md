@@ -37,7 +37,7 @@ author: seuunng       # 글쓴이
 
 1. **To bold text**, use `<굵은글씨>`.
 2. *To italicize text*, use `<기울임>`.
-3.  <mark>To highlight</mark>, use `<강조>`.
+3.  <mark>To highlight</mark>, use `<강조, 형광펜>`.
 - Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<마우스 올리면 줄임말표시 혹은 부제목 있을때 활용가능>`, 점선 밑줄 추가 회색글씨
 - Citations, like <cite>&mdash; Mark Otto</cite>, should use `<책제목>`.
 - <del>Deleted</del> text should use `<글자 가운데 줄>` and <ins>inserted</ins> text should use `<글자 밑줄>`.
@@ -56,12 +56,8 @@ author: seuunng       # 글쓴이
 // Create a function that takes two arguments and returns the sum of those arguments
 var adder = new Function("a", "b", "return a + b");
 
-// Call the function
-adder(2, 6);
-// > 8
-{% endhighlight %}
 
-Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+{% endhighlight %}
 
 {% highlight js linenos %}
 // 코드입력 줄넘버와 함께
@@ -69,12 +65,7 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 // Create a function that takes two arguments and returns the sum of those arguments
 var adder = new Function("a", "b", "return a + b");
 
-// Call the function
-adder(2, 6);
-// > 8
 {% endhighlight %}
-
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. 
 
 ### Lists
 <dl>

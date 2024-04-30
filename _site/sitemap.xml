@@ -5,7 +5,14 @@
 <lastmod>2024-04-28T14:27:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</loc>
+<lastmod>2024-04-30T22:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/</loc>
@@ -15,6 +22,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/listOfProject/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>

@@ -1,6 +1,4 @@
 - title: Project
-  url: /project
-- title: Blog
   url: /
-- title: About
-  url: /about/
+- title: Blog
+  url: /blog

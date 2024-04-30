@@ -1,5 +1,6 @@
 
 cd /Users/seunghee/seuunng.github.io
+$ cd \seuunng.github.io
 
 bundle update
 

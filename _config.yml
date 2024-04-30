@@ -1,8 +1,8 @@
 # Setup
-title: Seuunng Blog
-description: 
+title: 스며드는 개발자
+description: 삶의 작은 불편을 편리함으로 전화시키는 코딩을 꿈꿉니다.
 url: https://seuunng.github.io
-avatar: /avatar.jpeg
+avatar: /avatar.jpeg 
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
@@ -30,7 +30,7 @@ exclude:
 # Optimize Jekyl SEO Tag
 logo: logo.png
 social:
-  name: seuunng
+  name: seung-hee, park
   links:
     - https://github.com/seuunng
     - https://blog.naver.com/alldaytt
