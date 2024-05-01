@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>익숙하지만 낯선 코드, 접근제한자와 Java키워드 | 스며드는 개발자</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="익숙하지만 낯선 코드, 접근제한자와 Java키워드" />
+<meta name="author" content="Seuunng" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="근로자의 날인데도 수업을 들으러 간다. 익숙한 등원 길에 마주치던 귀여운 잼민이도 엘레베이터 앞에 줄 서있는 직장인들도 없는 낯선 아침이었다. 근로자의 날인데 초등학생은 왜 쉬는걸까하는 궁금증을 뒤로 한채 공부할 기분이 안나는 무겁고 늘어지는 적막한 아침 공기를 뚫고 교실에 들어선다. 수업을 듣다보면 강사님의 코드를 따라쓰고 오타 확인하기 바빠 내가 무슨 코드를 쓰고 있는 건지 미처 생각하지 못할 때가 있다. 또 다르게는 자주봐서 매우 익숙하나 무슨 뜻인지 모르는 코드들도 있다. 오늘은 무슨 뜻 인지도 정확히 모르고 강사님이 쓰는대로 따라 썼던 익숙하지만 낯선 코드에 대해서 공부해보고자 한다." />
+<meta property="og:description" content="근로자의 날인데도 수업을 들으러 간다. 익숙한 등원 길에 마주치던 귀여운 잼민이도 엘레베이터 앞에 줄 서있는 직장인들도 없는 낯선 아침이었다. 근로자의 날인데 초등학생은 왜 쉬는걸까하는 궁금증을 뒤로 한채 공부할 기분이 안나는 무겁고 늘어지는 적막한 아침 공기를 뚫고 교실에 들어선다. 수업을 듣다보면 강사님의 코드를 따라쓰고 오타 확인하기 바빠 내가 무슨 코드를 쓰고 있는 건지 미처 생각하지 못할 때가 있다. 또 다르게는 자주봐서 매우 익숙하나 무슨 뜻인지 모르는 코드들도 있다. 오늘은 무슨 뜻 인지도 정확히 모르고 강사님이 쓰는대로 따라 썼던 익숙하지만 낯선 코드에 대해서 공부해보고자 한다." />
+<link rel="canonical" href="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword/" />
+<meta property="og:url" content="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword/" />
+<meta property="og:site_name" content="스며드는 개발자" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-01T21:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="익숙하지만 낯선 코드, 접근제한자와 Java키워드" />
+<meta name="google-site-verification" content="xxxxx" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Seuunng"},"dateModified":"2024-05-01T21:00:00+09:00","datePublished":"2024-05-01T21:00:00+09:00","description":"근로자의 날인데도 수업을 들으러 간다. 익숙한 등원 길에 마주치던 귀여운 잼민이도 엘레베이터 앞에 줄 서있는 직장인들도 없는 낯선 아침이었다. 근로자의 날인데 초등학생은 왜 쉬는걸까하는 궁금증을 뒤로 한채 공부할 기분이 안나는 무겁고 늘어지는 적막한 아침 공기를 뚫고 교실에 들어선다. 수업을 듣다보면 강사님의 코드를 따라쓰고 오타 확인하기 바빠 내가 무슨 코드를 쓰고 있는 건지 미처 생각하지 못할 때가 있다. 또 다르게는 자주봐서 매우 익숙하나 무슨 뜻인지 모르는 코드들도 있다. 오늘은 무슨 뜻 인지도 정확히 모르고 강사님이 쓰는대로 따라 썼던 익숙하지만 낯선 코드에 대해서 공부해보고자 한다.","headline":"익숙하지만 낯선 코드, 접근제한자와 Java키워드","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Seuunng"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword/"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="스며드는 개발자" />
+<!-- 웹브라우저 아이콘 설정
+<link rel="icon" href="/favicon.png" type="image/x-icon"> --></head>
+
+
+  <body>
+
+    <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
+  <a href="/about/">
+    <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="seuunng">
+    </div>
+  </a>
+  <div class="masthead-title">
+    <a href="/" title="Home">스며드는 개발자</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>삶의 작은 불편을 편리함으로 전화시키는 코딩을 꿈꿉니다.</small>
+  </div><nav class="navigation">
+    <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Project</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/blog">Blog</a>
+      </li></ul>
+  </nav><div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://github.com/seuunng">
+            <i class="fab fa-github" title="GitHub"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://www.youtube.com/@juumjump">
+            <i class="fab fa-youtube" title="Youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+</header>
+</div>
+
+      <div class="content pure-u-1 pure-u-md-1-2"><main>
+  <!-- Post 본문 을 표시 -->
+<article class="post">
+  <h1 class="post-title">익숙하지만 낯선 코드, 접근제한자와 Java키워드</h1>
+  <div class="post-meta"><time datetime="2024-05-01T21:00:00+09:00" itemprop="datePublished">1 May 2024</time><span> • </span>
+      
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          Seuunng
+        </span></div>
+
+  <p>근로자의 날인데도 수업을 들으러 간다. 익숙한 등원 길에 마주치던 귀여운 잼민이도 엘레베이터 앞에 줄 서있는 직장인들도 없는 낯선 아침이었다. 근로자의 날인데 초등학생은 왜 쉬는걸까하는 궁금증을 뒤로 한채 공부할 기분이 안나는 무겁고 늘어지는 적막한 아침 공기를 뚫고 교실에 들어선다. 수업을 듣다보면 강사님의 코드를 따라쓰고 오타 확인하기 바빠 내가 무슨 코드를 쓰고 있는 건지 미처 생각하지 못할 때가 있다. 또 다르게는 자주봐서 매우 익숙하나 무슨 뜻인지 모르는 코드들도 있다. 오늘은 무슨 뜻 인지도 정확히 모르고 강사님이 쓰는대로 따라 썼던 <strong>익숙하지만 낯선 코드</strong>에 대해서 공부해보고자 한다.</p>
+
+<h2 id="접근제한자">접근제한자</h2>
+<p>클래스, 메서드, 필드와 같은 자바 언어 요소에 대한 <strong>접근 수준을 정의</strong>하는 데 사용되는 키워드로 이를 통해 특정 코드의 접근 가능 정도를 제어하고, 외부에서 사용 허용할 지 여부를 결정한다. 어떤 접근제한자를 붙여서 만드느냐에 따라서 접근할 수 있는 범위가 달라진다는 얘기다. 으, 접근제한자에 대해서 잘 파악하지 못하고 아무거나 따라 썼다가는 도대체 왜 안되는거야!!를 백만번 외쳐도 왜인지 못 찾는 불상사가 생기기 십상이겠다. 그러니 오늘 아주 확실히 파악해 두자.</p>
+
+<h3 id="public">public</h3>
+<p>모든 클래스에서 접근할 수 있는 <strong>가장 제한이 없는</strong> 접근제한자로 클래스, 메서드, 필드에 사용 가능하다. 가장 자주 보인것 같다. 공공의 이런 뜻일까? 다행히 별 제한 없이 다 사용할 수 있게 허용한다. 같은 패키지가 아니라도, 상속관계가 아니라도 접근을 허용하는 시골집 마당에서 키우는 귀여운 발바리 강아지 같은 접근제한자였다. 보안이 필요한 경우에는 주의할 필요가 있겠다. 기억하자.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Public 클래스
+<span class="k">**</span>public<span class="k">**</span> class PublicClass <span class="o">{</span>
+    // Public 생성자
+    <span class="k">**</span>public<span class="k">**</span> PublicClass<span class="o">()</span> <span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="protected">protected</h3>
+<p>상속받은 <strong>하위 클래스</strong> 혹은 <strong>동일한 패키지의 클래스</strong>에서만 접근할 수 있다. 외부 패키지에서는 접근할 수 없지만 <strong>상속 관계</strong>에 있는 경우에는 접근할 수 있다. 보호하는 이라는 뜻일까? 외부의 접근은 차단하여 보호한다. 그래도 상속받은 클래스에게는 접근을 허용한다는 여지를 남긴다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Protected 클래스
+class ProtectedClass <span class="o">{</span>
+    // <span class="k">**</span>Protected<span class="k">**</span> 생성자
+    protected ProtectedClass<span class="o">()</span> <span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="default-패키지-프라이빗">default: 패키지 프라이빗</h3>
+<p>접근 제한자를 명시하지 않을 때 <strong>기본값</strong>으로 적용되는 접근제한자로 <strong>같은 패키지 내의 클래스</strong>에서만 접근할 수 있다. 접근 수준은 protected보다 더 제한적이라고 볼 수 있다. protected는 외부라도 상속관계인 경우에는 접근을 허용하는 조건이 있지만 이 경우에는 어떠한 조건따위 없이 무조건 다른 패키지에서의 접촉은 차단하는 접근제한자다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Package-private 클래스
+class PackagePrivateClass <span class="o">{</span>
+    // Package-private 생성자
+    PackagePrivateClass<span class="o">()</span> <span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="private">private</h3>
+<p><strong>해당 클래스 내부</strong>에서만 접근할 수 있다. 이것도 많이 봤는데 이렇게 도도한 접근제한자 였다니 다시 보인다. 가장 접근 제한이 강력한 수준으로 다른 클래스나 하위 클래스(자식클래스나 파생클래스)에서도 접근할 수 없다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Private 클래스
+class PrivateClass <span class="o">{</span>
+    // Private 생성자
+    <span class="k">**</span>private<span class="k">**</span> PrivateClass<span class="o">()</span> <span class="o">{}</span>
+
+    // 내부에서만 접근 가능한 메서드
+    public static PrivateClass getInstance<span class="o">()</span> <span class="o">{</span>
+        <span class="k">return </span>new PrivateClass<span class="o">()</span><span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>*비교 <strong>로컬클래스</strong>: private 클래스는 외부에서 클래스에 접근하는 것을 막는 것이고, 로컬클래스는 클래스 안에 생성된 클래스를 정의하는 것으로 해당 속한 클래스나 메서드, 블록 내부에서만 사용되는 클래스를 말한다. 제한적이라는 것은 비슷하지만, 개념 자체가 달라서 비교를 할 수 가 없다..</p>
+</blockquote>
+
+<h2 id="java-키워드">Java 키워드</h2>
+
+<h3 id="static">static</h3>
+<p>static은 <strong>정적</strong> 키워드로, 해당 메서드 또는 변수가 <strong>클래스 수준</strong>에 속함을 나타낸다. 즉, 클래스의 인스턴스화 없이도 메서드를 호출 할 수 있다. 클래스 로딩 시 메모리에 할당된다. 일반적으로 클래스 수준의 유틸리티 메서드 또는 상수를 정의할 때 사용된다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Example <span class="o">{</span>
+    public <span class="k">**</span>static<span class="k">**</span> int counter <span class="o">=</span> 0<span class="p">;</span> // static 필드
+
+    public <span class="k">**</span>static<span class="k">**</span> void increment<span class="o">()</span> <span class="o">{</span> // static 메서드
+        counter++<span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="final">final</h3>
+<p>final 키워드는 변수, 메서드, 또는 클래스를 <strong>수정하지 못하도록</strong> 제한할 때 사용된다. 변수에서 final이 사용되면 값이 변할 수 없고, 재할당할 수 없음을 의미한다. 이는 상수와 비슷하지만 상수는 컴파일 시부터 정해져 있는 값을 의미하고 변수를 final로 정의한다는 것은 초기화한 후에 변경할 수 없다는 것을 의미한다. 클래스 변수에 final과 static을 동시에 사용하면 컴파일 시점에 상수로 동작하게 되어, 프로그램이 실행하는 동안 변경할 수 없다. final이 메서드에서 사용되면 서브클래스에서 오버라이딩할 수 없음을 의미한다. 클래스에서 사용되면 서브클래스를 만들 수 없음을 의미한다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public <span class="k">**</span>final<span class="k">**</span> class FinalClass <span class="o">{</span> // 상속 불가능한 클래스
+    public final void display<span class="o">()</span> <span class="o">{</span> // 오버라이딩 불가능한 메서드
+        System.out.println<span class="o">(</span><span class="s2">"Final Method"</span><span class="o">)</span><span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+public class Example <span class="o">{</span>
+    public <span class="k">**</span>final<span class="k">**</span> int CONSTANT_VALUE <span class="o">=</span> 42<span class="p">;</span> // 상수
+<span class="o">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li><strong>상수</strong>란? 상수는 프로그램에서 변경할 수 없는 값이다. 한 번 정의되면 재할당 할 수 없으며, 프로그램의 나머지 부분에서 계속해서 사용합니다. 상수는 보통 프로그램에서 의미가 명확하고 변하지 않는 값을 표현하기 위해 사용된다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="main">main</h3>
+<p>main 메서드는 Java <strong>애플리케이션의 진입점</strong>으로, 프로그램 시작 시 호출되는 메서드다.JVM(Java Virtual Machine)이 프로그램을 실행할 때 main 메서드를 찾아 실행한다. 일반적으로 public static void main(String[] args)의 형태를 취한다. String[] 타입의 매개변수를 받아서 프로그램에 전달된 명령줄 인자를 처리할 수 있다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MainClass <span class="o">{</span>
+    public static void <span class="k">**</span>main<span class="k">**</span><span class="o">(</span>String[] args<span class="o">)</span> <span class="o">{</span>
+        System.out.println<span class="o">(</span><span class="s2">"Hello, World!"</span><span class="o">)</span><span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="void">void</h3>
+<p>void 키워드는 메서드가 <strong>반환값을 갖지 않음</strong>을 나타낸다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public <span class="k">**</span>void<span class="k">**</span> printMessage<span class="o">(</span>String message<span class="o">)</span> <span class="o">{</span>
+    System.out.println<span class="o">(</span>message<span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+
+  
+    <!-- 포스트 태그 섹션 -->
+      <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags"><li>
+        <a class="post-tag" href="/tags/#accessmodifier">accessmodifier</a></li><li>
+        <a class="post-tag" href="/tags/#javakeyword">javakeyword</a></li></ul>
+</div>
+
+  
+
+  
+</article>
+
+
+<aside class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/">
+          엉망진창 깃허브 블로그 만들기 도전!
+          <small><time datetime="2024-04-30T22:00:00+09:00">30 Apr 2024</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2024/04/28/myFirstPost/">
+          대망의 깃허브 블로그 첫 포스트!
+          <small><time datetime="2024-04-28T14:27:00+09:00">28 Apr 2024</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+</main>
+
+<footer class="footer"><small>
+    &copy; 2024 <a href="https://github.com/seuunng/">seuunng</a>.
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
+  </small>
+</footer></div>
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+<div  class="toc-wrapper">
+  <h2 class="toc-title">Table of Contents</h2>
+    <nav class="toc-nav">
+      <ul class="toc">
+  <li><a href="#접근제한자">접근제한자</a>
+    <ul>
+      <li><a href="#public">public</a></li>
+      <li><a href="#protected">protected</a></li>
+      <li><a href="#default-패키지-프라이빗">default: 패키지 프라이빗</a></li>
+      <li><a href="#private">private</a></li>
+    </ul>
+  </li>
+  <li><a href="#java-키워드">Java 키워드</a>
+    <ul>
+      <li><a href="#static">static</a></li>
+      <li><a href="#final">final</a></li>
+      <li><a href="#main">main</a></li>
+      <li><a href="#void">void</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</div>
+
+</div>
+    </div>
+
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script><script>
+  function strip(str, remove) {
+    while (str.length > 0 && remove.indexOf(str.charAt(0)) != -1) {
+      str = str.substr(1);
+    }
+    while (str.length > 0 && remove.indexOf(str.charAt(str.length - 1)) != -1) {
+      str = str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  function scroll() {
+    console.log('scroll');
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('forceCheckScroll');
+  }
+
+  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  const checkScroll = strip(window.location.pathname, '/') !== strip('', '/');
+
+  if (forceCheckScroll || checkScroll) {
+    const maxWidth = "(max-width: 48rem)";
+    const result = window.matchMedia(maxWidth);
+    if (result.matches) {
+      scroll();
+    } else {
+      result.addListener((match) => {
+        if (match.media == maxWidth) {
+          if (match.matches) {
+            scroll();
+          }
+        }
+      });
+    }
+  }
+</script>
+</body>
+</html>

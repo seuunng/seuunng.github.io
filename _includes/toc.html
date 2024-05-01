@@ -53,16 +53,17 @@
             generate the table of contents and will NOT output the markdown given to it
     {% endcomment %}
 <!-- 본문 오른쪽 사이드 목차 -->
+	<!-- 초기설정 -->
     {% capture my_toc %}{% endcapture %}
     {% assign orderedList = include.ordered | default: false %}<!--정렬된목차 생성여부  -->
     {% assign skipNoIDs = include.skipNoIDs | default: false %}<!--ID가 없는 헤더건널뛸지 -->
-    {% assign minHeader = include.h_min | default: 1 %} <!--사용할 최대헤더레벨  -->
-    {% assign maxHeader = include.h_max | default: 6 %} <!-- 사용할 최소헤더레벨 -->
+    {% assign minHeader = include.h_min | default: 1 %} <!--사용할 최소 헤더 수준  -->
+    {% assign maxHeader = include.h_max | default: 6 %} <!-- 사용할 최대 헤더 수준 -->
     {% assign nodes = include.html | split: '<h' %} <!-- 전체문서를 <h 기준으로 쪼갬 -->
     {% assign firstHeader = true %}<!-- 첫번째 헤더 추적 -->
     {% assign previousLevel = 0 %}<!-- 이전헤더레벨 추적 -->
     {% capture listModifier %}{% if orderedList %}1.{% else %}-{% endif %}{% endcapture %}<!-- 정렬여부에 따라 1. or - 표시-->
-    {% for node in nodes %} 
+    {% for node in nodes %} <!-- 반복시작 -->
     
         {% if node == "" %}
             {% continue %}
@@ -136,17 +137,18 @@
 {{ space }}{{ listModifier }} {{ listItemClass }} {{ list_item }}{% if include.anchor_class %}{:.{{ include.anchor_class }}}{% endif %}{% endcapture %}
 
         {% assign previousLevel = indentAmount %}
-    {% endfor %}
+    {% endfor %} <!-- 반복 끝  -->
 
     {% if include.class and include.class != blank %}
         {% capture my_toc %}{:.{{ include.class }}}
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
-
+	<!-- include.class 가 비어있지 않으면  목차에 저장하라는 조건실행문-->
     {% if include.id %}
         {% capture my_toc %}{: #{{ include.id }}}
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
+	<!-- include.id 가 비어있지 않으면  목차에 저장하라는 조건실행문-->
 
     <!--
     If we have a submenu class, we need to close off all the remaining list item groups so that submenu classes are
