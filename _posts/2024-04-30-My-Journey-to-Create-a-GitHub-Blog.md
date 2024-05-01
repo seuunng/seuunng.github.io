@@ -7,6 +7,8 @@ categories:
 tags: 깃허브블로그
 date: 2024-04-30 21:00 +0800
 #last_modified_at: 2024-04-30 22:00 +0800
+pagination:
+  enabled: true
 published: true
 toc: false
 excerpt: 깃허브 블로그 만들면서 처음 본 단어 공부하기

@@ -3,6 +3,8 @@ layout: post                      # 사용할 레이아웃 파일 지정
 title: 대망의 깃허브 블로그 첫 포스트!    # 포스트 제목
 date: 2024-04-28 13:27 +0800      # 포스트 날짜 및 시간 (타임존 포함)
 #last_modified_at:                 # 최근 수정 날짜
+pagination:
+  enabled: true
 toc:  true        # 목차(Table of Contents) 활성화 여부
 #tags:             # 이 포스트와 관련된 태그 목록
 author: seuunng       # 글쓴이
