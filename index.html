@@ -4,27 +4,28 @@ layout: default
 <h1>Project</h1>
 <br>
 <div class="posts">
+{% for project in site.data.project %}
   <section class="post-entry">
 	<div class="project">
-	    <img src="{{ project-name }}" class="project-image" alt="">
+	    <img src="{{ project.cover_image }}" class="project-image" alt="{{ project.project_name }}">
 <!-- 프로젝트용 사진사이즈 설정 -->
 	</div>
 	<div>
-	    <h2 class="post-title" name="project-name">
-	      <a href="/listOfProject">
-	        A Diary for the Lazybones
+	    <h2 class="post-title" name="{{ project.project_name }}">
+	      <a href="{{ project.url }}">
+			{{ project.project_name }}
 <!-- 동적데이터로 변경 -->
 	      </a>
 	    </h2>
     <div class="post-meta">
-		0 Posts·Last updated on April 29, 2024
+		990 Posts·Last updated on April 29,  {{ project.period }}
 <!-- 동적데이터로 변경 -->
     </div>
-    <p>A simple and beautiful, powerful diary for lazybones like me.</p>
+    <p>{{ project.description }}</p>
 <!-- 동적데이터로 변경 -->
     </div>
   </section>
-
+  {% endfor %}
 </div>
 
 
