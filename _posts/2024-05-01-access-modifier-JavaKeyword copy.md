@@ -1,12 +1,15 @@
 ---
 layout: post
 title: 익숙하지만 낯선 코드, 접근제한자와 Java키워드
-author: Seuunng
+author: 개발자씅
 categories: 
 - 코딩
 tags: accessModifier, JavaKeyword
 date: 2024-05-01 20:00 +0800
-#last_modified_at: 2024-10-30 22:00 +0800
+lastmode: 2024-05-01 20:00 +0800
+sitemap:
+  changefreq: daily
+  priority : 1.0
 published: true
 toc: true
 excerpt: 근로자의 날을 맞이하여 수업시간에 본 모르는 코드 공부하기

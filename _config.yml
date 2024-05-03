@@ -1,10 +1,10 @@
 # Setup
-title: 스며드는 개발자
-description: 삶의 작은 불편을 편리함으로 전화시키는 코딩을 꿈꿉니다.
+title: 결국은 개발자
+description: 한걸음씩 성실하고 부지런하게 차곡차곡 쌓는 중 입니다.
 url: https://seuunng.github.io
-avatar: /avatar.jpeg 
+avatar: /assets/images/avatar.jpeg 
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /assets/images/bg.jpeg
 # Include specific folders
 # Gems
 plugins:
@@ -60,6 +60,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: seuunng
+  name: 개발자씅
   url: https://github.com/seuunng/
   email: mnb2856@gmail.com

@@ -8,41 +8,41 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>익숙하지만 낯선 코드, 접근제한자와 Java키워드 | 스며드는 개발자</title>
+<title>익숙하지만 낯선 코드, 접근제한자와 Java키워드 | 결국은 개발자</title>
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="익숙하지만 낯선 코드, 접근제한자와 Java키워드" />
-<meta name="author" content="Seuunng" />
+<meta name="author" content="개발자씅" />
 <meta property="og:locale" content="ko" />
 <meta name="description" content="근로자의 날을 맞이하여 수업시간에 본 모르는 코드 공부하기" />
 <meta property="og:description" content="근로자의 날을 맞이하여 수업시간에 본 모르는 코드 공부하기" />
 <link rel="canonical" href="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/" />
 <meta property="og:url" content="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/" />
-<meta property="og:site_name" content="스며드는 개발자" />
+<meta property="og:site_name" content="결국은 개발자" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-05-01T21:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="익숙하지만 낯선 코드, 접근제한자와 Java키워드" />
 <meta name="google-site-verification" content="xxxxx" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Seuunng"},"dateModified":"2024-05-01T21:00:00+09:00","datePublished":"2024-05-01T21:00:00+09:00","description":"근로자의 날을 맞이하여 수업시간에 본 모르는 코드 공부하기","headline":"익숙하지만 낯선 코드, 접근제한자와 Java키워드","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Seuunng"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-01T21:00:00+09:00","datePublished":"2024-05-01T21:00:00+09:00","description":"근로자의 날을 맞이하여 수업시간에 본 모르는 코드 공부하기","headline":"익숙하지만 낯선 코드, 접근제한자와 Java키워드","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/"}</script>
 <!-- End Jekyll SEO tag -->
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="스며드는 개발자" />
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="결국은 개발자" />
 <!-- 웹브라우저 아이콘 설정
 <link rel="icon" href="/favicon.png" type="image/x-icon"> --></head>
 
 
   <body>
 
-    <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
-  <a href="/about/">
-    <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="seuunng">
+    <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/assets/images/bg.jpeg);"><header class="masthead">
+  <a href="/about/"title="Profile">
+    <div class="avatar"><img src="/assets/images/avatar.jpeg" class="avatar-image" alt="개발자씅">
     </div>
   </a>
   <div class="masthead-title">
-    <a href="/" title="Home">스며드는 개발자</a>
+    <a href="/" title="Home">결국은 개발자</a>
   </div>
   <div class="masthead-tagline">
-    <small>삶의 작은 불편을 편리함으로 전화시키는 코딩을 꿈꿉니다.</small>
+    <small>한걸음씩 성실하고 부지런하게 차곡차곡 쌓는 중 입니다.</small>
   </div><nav class="navigation">
     <ul class="navigation-list"><li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Project</a>
@@ -72,7 +72,7 @@
   <div class="post-meta"><time datetime="2024-05-01T21:00:00+09:00" itemprop="datePublished">1 May 2024</time><span> • </span>
       
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          Seuunng
+          개발자씅
         </span></div>
 
   <p>근로자의 날인데도 수업을 들으러 간다. 익숙한 등원 길에 마주치던 귀여운 잼민이도 엘레베이터 앞에 줄 서있는 직장인들도 없는 낯선 아침이었다. 근로자의 날인데 초등학생은 왜 쉬는걸까하는 궁금증을 뒤로 한채 공부할 기분이 안나는 무겁고 늘어지는 적막한 아침 공기를 뚫고 교실에 들어선다. 수업을 듣다보면 강사님의 코드를 따라쓰고 오타 확인하기 바빠 내가 무슨 코드를 쓰고 있는 건지 미처 생각하지 못할 때가 있다. 또 다르게는 자주봐서 매우 익숙하나 무슨 뜻인지 모르는 코드들도 있다. 오늘은 무슨 뜻 인지도 정확히 모르고 강사님이 쓰는대로 따라 썼던 <strong>익숙하지만 낯선 코드</strong>에 대해서 공부해보고자 한다.</p>
@@ -190,7 +190,15 @@ public class Example <span class="o">{</span>
   <ul class="related-posts">
     
       <li>
-        <a href="/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update/">
+        <a href="/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4/">
+          비동기식 코드 순서 제어하기
+          <small><time datetime="2024-05-03T11:00:00+09:00">03 May 2024</time></small>
+        </a>
+      </li>
+      
+    
+      <li>
+        <a href="/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/">
           깃허브 블로그 접어야하나 고민하게 한 Paginator
           <small><time datetime="2024-05-02T13:00:00+09:00">02 May 2024</time></small>
         </a>
@@ -205,14 +213,6 @@ public class Example <span class="o">{</span>
       </li>
       
     
-      <li>
-        <a href="/2024/04/28/myFirstPost/">
-          대망의 깃허브 블로그 첫 포스트!
-          <small><time datetime="2024-04-28T14:27:00+09:00">28 Apr 2024</time></small>
-        </a>
-      </li>
-      
-    
   </ul>
 </aside>
 
@@ -221,7 +221,7 @@ public class Example <span class="o">{</span>
 </main>
 
 <footer class="footer"><small>
-    &copy; 2024 <a href="https://github.com/seuunng/">seuunng</a>.
+    &copy; 2024 <a href="https://github.com/seuunng/">개발자씅</a>.
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
   </small>
 </footer></div>

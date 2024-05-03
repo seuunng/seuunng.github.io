@@ -1,12 +1,15 @@
 ---
 layout: post
 title: 엉망진창 깃허브 블로그 만들기 도전!
-author: seuunng 
+author: 개발자씅
 categories: 
 - 코딩
 tags: 깃허브블로그
 date: 2024-04-30 21:00 +0800
-#last_modified_at: 2024-04-30 22:00 +0800
+lastmode: 2024-04-30 21:00 +0800
+sitemap:
+  changefreq: daily
+  priority : 1.0
 pagination:
   enabled: true
 published: true

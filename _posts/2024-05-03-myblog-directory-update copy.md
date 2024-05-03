@@ -1,12 +1,15 @@
 ---
 layout: post
 title: 깃허브 블로그 접어야하나 고민하게 한 Paginator
-author: seuunng
+author: 개발자씅
 categories: 
 - 코딩
 tags: 깃허브블로그
 date: 2024-05-02 12:00 +0800
-#last_modified_at: 2024-10-30 22:00 +0800
+lastmode: 2024-05-02 12:00 +0800
+sitemap:
+  changefreq: daily
+  priority : 1.0
 published: true
 toc: true
 excerpt: 깃허브 블로그 디렉토리 정리 및 수정 계획, 엄청 마음고생시킨 Paginator 문제 해결 과정
