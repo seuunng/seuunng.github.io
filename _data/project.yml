@@ -1,6 +1,12 @@
+
+projects:
 - project_name: A Diary for the Lazybones
   description: A simple and beautiful, powerful diary for lazybones like me.
   url: /project/diaryProject/
   cover_image: assets/images/project.jpg
   period: 2024
-- 
+- project_name: 개발자가 될꺼야 블로그
+  description: 공부와 성장의 기록
+  url: /project/gitpageBlog/
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024
