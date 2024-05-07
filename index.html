@@ -12,7 +12,7 @@ layout: default
 	</div>
 	<div>
 	    <h2 class="post-title" name="{{ project.project_name }}">
-	      <a href="{{ project.url }}">
+	      <a href="{{ project.url | relative_url}}">
 			{{ project.project_name }}
 <!-- 동적데이터로 변경 -->
 	      </a>
