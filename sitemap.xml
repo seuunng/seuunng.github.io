@@ -1,20 +1,105 @@
 ---
+layout: null
 ---
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    {% assign all_posts = site.posts | concat: site.logs | sort: 'date' | reverse %}
+    
+     <!-- logs 폴더의 파일을 별도로 할당 -->
+    {% assign log_files = site.pages | where_exp: "item", "item.path contains '/_logs/'" %}
+
+    {% for item in all_posts %}
     <url>
-        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+        <loc>{{ site.url }}{{ item.url }}</loc>
+        
+        {% if item.lastmod == null %}
+        <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ item.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        {% if item.sitemap.changefreq == null %}
+        <changefreq>daily</changefreq>
+        {% else %}
+        <changefreq>{{ item.sitemap.changefreq }}</changefreq>
+        {% endif %}
+
+        {% if item.sitemap.priority == null %}
+        <priority>0.5</priority>
+        {% else %}
+        <priority>{{ item.sitemap.priority }}</priority>
+        {% endif %}
+
     </url>
     {% endfor %}
 
-    {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
+    <!-- diaryProject 파일들을 추가적으로 반복 -->
+    {% for page in log_files %}
     <url>
-        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+
+        <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ item.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        {% if item.sitemap.changefreq == null %}
+        <changefreq>weekly</changefreq>
+        {% else %}
+        <changefreq>{{ item.sitemap.changefreq }}</changefreq>
+        {% endif %}
+
+        {% if item.sitemap.priority == null %}
+        <priority>0.5</priority>
+        {% else %}
+        <priority>{{ item.sitemap.priority }}</priority>
+        {% endif %}
     </url>
-    {% endif %}
-    {% endif %}
     {% endfor %}
+
+<url>
+  <loc>https://seuunng.github.io/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/blog/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/categories/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/2024/04/28/myFirstPost/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 </urlset>
