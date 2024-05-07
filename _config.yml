@@ -67,3 +67,5 @@ author:
   name: 개발자씅
   url: https://github.com/seuunng/
   email: mnb2856@gmail.com
+
+baseurl: "/"

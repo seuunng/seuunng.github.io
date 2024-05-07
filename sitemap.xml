@@ -38,10 +38,10 @@ layout: null
     {% endfor %}
 
     <!-- diaryProject 파일들을 추가적으로 반복 -->
-    {% for page in log_files %}
+    {% for item in log_files %}
     <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
-
+        <loc>{{ site.url }}{{ item.url }}</loc>
+        {% if item.lastmod == null %}
         <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
         {% else %}
         <lastmod>{{ item.lastmod | date_to_xmlschema }}</lastmod>

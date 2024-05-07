@@ -1,6 +1,6 @@
 <header class="masthead">
   {% if site.avatar -%}
-  <a href="/about/"title="Profile">
+  <a href="{{ "/about/" | relative_url }}" title="Profile">
     <div class="avatar">
       {%- if site.avatar contains "://" -%}
         {%- assign avatar = site.avatar -%}

@@ -1,6 +1,6 @@
 - project_name: A Diary for the Lazybones
   description: A simple and beautiful, powerful diary for lazybones like me.
-  url: /project/diaryProject/index
-  cover_image: /project.jpeg
+  url: /project/diaryProject/
+  cover_image: assets/images/project.jpg
   period: 2024
 - 

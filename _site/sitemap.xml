@@ -1,94 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    
+    
+     <!-- logs 폴더의 파일을 별도로 할당 -->
+    
+
     
     <url>
-        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4/</loc>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/07/%EC%84%9C%EB%B2%84%EC%97%94%EC%A7%84%EB%93%B1%EB%A1%9D/</loc>
+        
+        
+        <lastmod>2024-05-07T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy/</loc>
+        
+        
+        <lastmod>2024-05-03T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>1.0</priority>
+        
+
     </url>
     
     <url>
         <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/</loc>
+        
+        
+        <lastmod>2024-05-02T13:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>1.0</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/logs/diaryProject/2024-05-02-TEST/</loc>
+        
+        
+        <lastmod>2024-05-02T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
         <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</loc>
+        
+        
+        <lastmod>2024-05-01T21:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>1.0</priority>
+        
+
     </url>
     
     <url>
         <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</loc>
+        
+        
+        <lastmod>2024-04-30T22:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>1.0</priority>
+        
+
     </url>
     
     <url>
         <loc>http://localhost:4000/2024/04/28/myFirstPost/</loc>
+        
+        
+        <lastmod>2024-04-28T14:27:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>1.0</priority>
+        
+
     </url>
     
 
+    <!-- diaryProject 파일들을 추가적으로 반복 -->
     
-    
-    
-    <url>
-        <loc>http://localhost:4000/404.html</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/categories/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/_layouts/dates/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/feed.xml</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/project/DiaryProject/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/blog/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/</loc>
-    </url>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/tags/</loc>
-    </url>
-    
-    
-    
+
+<url>
+  <loc>https://seuunng.github.io/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/blog/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/categories/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://seuunng.github.io/2024/04/28/myFirstPost/</loc>
+  <lastmod>2024-05-06T07:01:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 </urlset>
