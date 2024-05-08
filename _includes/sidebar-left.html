@@ -1,6 +1,6 @@
 <header class="masthead">
   {% if site.avatar -%}
-  <a href="{{ "/about/" | relative_url }}" title="Profile">
+  <a href="{{ '/about/' | relative_url }}" title="Profile">
     <div class="avatar">
       {%- if site.avatar contains "://" -%}
         {%- assign avatar = site.avatar -%}
@@ -12,7 +12,7 @@
   </a>
   {%- endif %}
   <div class="masthead-title">
-    <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
   </div>
   <div class="masthead-tagline">
     <small>{{ site.description }}</small>
@@ -21,6 +21,7 @@
   <nav class="navigation">
     <ul class="navigation-list">
     {%- for nav in site.data.navigation -%}
+    
       <li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
       </li>

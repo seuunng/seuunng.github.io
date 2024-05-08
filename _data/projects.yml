@@ -3,7 +3,27 @@
   url: /project/diaryProject/
   cover_image: assets/images/project.jpg
   period: 2024
-- project_name: 개발자가 될꺼야 블로그
+- project_name: 깃허브페이지개발-포트폴리오
+  description: 공부와 성장의 기록
+  url: /project/gitpageBlog/
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024
+- project_name: ERPsystem
+  description: 소상공인을 위한 ERP프로그램
+  url: /project/erpSystem/
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024
+- project_name: 냉장고정리해줘
+  description: 냉장고를 정리하는 어플
+  url: /project/sodwkdrh/
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024
+- project_name: 팀프로젝트2
+  description: 공부와 성장의 기록
+  url: /project/gitpageBlog/
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024
+- project_name: 팀프로젝트3 
   description: 공부와 성장의 기록
   url: /project/gitpageBlog/
   cover_image: assets/images/gitpageBlog.png

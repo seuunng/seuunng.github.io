@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: log
 title: 깃허브 블로그 접어야하나 고민하게 한 Paginator
 author: 개발자씅
 categories: 

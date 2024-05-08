@@ -5,7 +5,7 @@ layout: default
 <br>
 <div class="posts">
 {% for project in site.data.projects %}
-{% assign diary_posts_count = site.{{ project.project_name }} | size %}
+{% assign diary_posts_count = site.project.project_name | size %}
   <section class="post-entry">
 	<div class="project">
 	    <img src="{{ project.cover_image }}" class="project-image" alt="{{ project.project_name }}">
@@ -17,7 +17,7 @@ layout: default
 	      </a>
 	    </h2>
     <div class="post-meta">
-		{{ diary_posts_count }} Posts·Last updated on {{ page.last_modified_at | date: '%Y년 %-m월 %-d일' }},  {{ project.period }}
+		{{ diary_posts_count }} Posts·Last updated on {{ page.last_modified_at | date_to_string }}
 <!-- 동적데이터로 변경 -->
     </div>
     <p>{{ project.description }}</p>

@@ -7,7 +7,9 @@ paginate: true
 <h1>A Diary for the Lazybones</h1> <!--프로젝트 네임-->
 <!--동적데이터 처리 ㅜㅜ-->
 
-{%- assign taxonomies = site.logs | group_by_exp: "post", "post.date | date: '%Y'" -%}
+<!--logs/diaryProject 폴더 안의 post만그룹화 합니다.-->
+{%- assign filtered_posts = site.logs | where_exp: "item", "item.path contains '_logs/diaryProject/'" -%}
+{%- assign taxonomies = filtered_posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 <!--Jekyll 사이트의 모든 포스트(site.posts)를 가져와서, 
   각 포스트의 날짜를 기준으로 연도별로 그룹화합니다. 
   이 결과는 taxonomies라는 변수에 할당됩니다.-->

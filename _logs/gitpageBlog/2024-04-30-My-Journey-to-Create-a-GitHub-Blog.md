@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: log
 title: 엉망진창 깃허브 블로그 만들기 도전!
 author: 개발자씅
 categories: 

@@ -1,3 +1,6 @@
+---
+layout: about
+---
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -101,7 +104,7 @@
 			<div class="basic col">
 				<table class="content first left">
 					<tr>
-						<td class="Subtitle" colspan="2">박승희   010-8281-2856</td>
+						<td class="Subtitle" colspan="2">박승희   <전화번호></td>
 					</tr>
 					<tr>
 						<td class="Subtitle">개인역량 "에 대한 어필"</td>
@@ -109,6 +112,8 @@
 								- 성실성<br>
 								- 협력<br>
 								- 성장가능성<br>
+								- 문제해결능력<br>
+								- 계획성<br>
 							</td>
 					</tr>
 				</table>
@@ -120,7 +125,7 @@
 						<td class="Subtitle">
 							안녕하세요!<br>
 							스며드는 개발을 꿈꾸는 예비개발자 입니다.<br>
-							"소개글"
+							"소개글, 지원동기, 회사의 미션과 개인 가치관 일치성"
 						</td>
 					</tr>
 					<tr>
@@ -133,193 +138,61 @@
 			</div>
 		</div>
 	</div>
-	<div class="container text-center second">
-		<h1 class="sectionTitle"><i class="fa-solid fa-paperclip"></i> &nbsp;&nbsp;Skills</h1>
-		<div class="skills row">
-			<div class="col">
-				<table 	class="content second" 
-						style="border-bottom: 1px solid gray; 
-								border-top: 1px solid gray;">
-					<tr style="border-bottom: 1px solid gray; ">
-						<th style="width: 30%; ">
-							구분
-						</th>
-						<th style="width: 30%;" colspan="2">
-							Primary Skills
-						</th>
-						<th>
-							Experienced Skills
-						</th>
-						<th>
-							배워야 할 기술
-						</th>
-					</tr>
-					<tr  style="border-bottom: 1px solid gray; ">
-						<td class="Subtitle">
-							Programming Languages and Technology Stack
-						</td>
-						<td>
-							<i class="fa-brands fa-html5"></i> HTML <br>
-							<i class="fa-brands fa-css3"></i> CSS <br>
-							<i class="fa-brands fa-js"></i> JavaScript <br>
-							<i class="fa-brands fa-java"></i> JAVA <br>
-						</td>
-						<td>
-							이것을 할 수 있습니다. <br>
-							저것을 할 수 있습니다. <br>
-							이정도까지 가능합니다. <br>
-							이런거 할 수 있습니다. <br>
-						</td>
-						<td>
-							JSP 
-							<i class="fa-brands fa-node"></i> Node 
-							Dart
-						</td>
-						<td>
-							<i class="fa-brands fa-sass"></i> sass 
-							<i class="fa-brands fa-python"></i> Python 
-							TypeScript
-							C#
-						</td>
-					</tr>
-					<tr  style="border-bottom: 1px solid gray; ">
-						<td class="Subtitle">
-							Backend and Database
-						</td>
-						<td>
-							<i></i>Spring<br>
-							<i></i>SpringBoot<br>
-							<i></i>Tomcat<br>
-						</td>
 
-						<td>
-							<br>
-							<br>
-							<br>
-						</td>
-						<td>
-							<i></i>Oracle
-							<i></i>MySQL
-							<i></i>Ruby on Rails 
-						</td>
-						<td>
-							<i class="fa-brands fa-docker"></i>Docker
-							 Kubernetes, NestJS, Nginx
-						</td>
-					</tr>
-					<tr  style="border-bottom: 1px solid gray; ">
-						<td class="Subtitle">
-							Frontend and Tools
-						</td>
-						<td>
-							<i></i>Eclips<br>
-							<i></i>Visual Studio Code<br>
-						</td>
-						<td>
-							<i class="fa-brands fa-react"></i>reacat
-							<i class="fa-brands fa-vuejs"></i>vue.js 
-							<i></i>Flutter
-						</td>
-						<td>
-							Next.js, <br>
-							<i class="fa-brands fa-aws"></i>AWS <br>
-							GitHub Actions<br>
-						</td>
-					</tr>
-
-					<tr  style="border-bottom: 1px solid gray; ">
-						<td class="Subtitle">
-							Version Control, Methodologies, and Operating Systems
-						</td>
-						<td>
-							<i class="fa-brands fa-github"></i>Github<br>
-						</td>
-
-						<td>
-							관리하고 있습니다. <br>
-						</td>
-						<td>
-							<i class="fa-brands fa-markdown"></i>MarkDown
-							<i class="fa-brands fa-windows"></i>Window
-							<i class="fa-brands fa-apple"></i>macOS
-							<i class="fa-brands fa-android"></i>안드로이드
-							<i class="fa-brands fa-linux"></i> Linux 
-						</td>
-						<td>
-							애자일, 스크럼, 칸반
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>		
-	</div>
-
-	<div class="container text-center third">
+	<div id="carouselExampleCaptions" class="container text-center third carousel slide">
+		<div class="carousel-indicators">
+		  {% for project in site.data.projects %}
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
+		  {% endfor %}
+		</div>
+		
 		<h1 class="sectionTitle"><i class="fa-regular fa-folder-open"></i> &nbsp;&nbsp;Projects</h1>
-		<div class="row projectSumary">
-			<div class="col projectSum1">
-				<div class="card">
-					<img src="..." class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">팀프로젝트: Acorn ERP Syste</h5>
-							<table class="content third">
-								<tr>
-									<td class="Subtitle" style="width: 30%;">프로젝트 소개</td>
-									<td>
-									</td>
-								</tr>
-								<tr>
-									<td class="Subtitle">주요기능소개</td>
-									<td>짜별로 각 루틴의 달성 여부, 할 일 목록, 시간 단위 일정 기입하기, 월별로 각 루틴의 달성 여부를 한눈에 확인하기</td>
-								</tr>
-								<tr>
-									<td class="Subtitle" >사용한 기술</td>
-									<td>
-										Frontend: Next.js, Zustand, Sass<br>
-										Backend: Next.js, Supabase Authentication, Vercel PostgreSQL<br>
-										Database: PostgreSQL<br>
-										Deployment: Vercel, Supabase (Authentication)
-									</td>
-								</tr>
-							</table>
-						<a href="#" class="btn btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
-						<a href="#" class="btn btn-primary">URL</a>
-					</div>
-				</div>
+		
+		<div class="row projectSumary carousel-inner">
+		  {% for project in site.data.projects %}
+		  <div class="col carousel-item {% if forloop.first %}active{% endif %}">
+			<div class="card">
+			  <img src="{{ project.cover_image }}" class="card-img-top" alt="{{ project.project_name }}">
+			  <div class="card-body">
+				<h5 class="card-title">{{ project.project_name }}</h5>
+				<table class="content third">
+				  <tr>
+					<td class="Subtitle" style="width: 30%;">프로젝트 소개</td>
+					<td>{{ project.description }}</td>
+				  </tr>
+				  <tr>
+					<td class="Subtitle">주요기능소개</td>
+					<td></td>
+				  </tr>
+				  <tr>
+					<td class="Subtitle">사용한 기술</td>
+					<td>
+
+						
+					</td>
+				  </tr>
+				  <tr>
+					<td colspan="2">
+						<a href="{{ project.url }}" class="btn btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
+						<a href="{{ project.url }}" class="btn btn-primary">URL</a></td>
+				  </tr>
+				</table>
+				<br><br>
+			  </div>
 			</div>
-			<div class="col projectSum2 ">
-				<div class="card">
-					<img src="..." class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">개인프로젝트: 자동일기장</h5>
-						<p class="card-text">
-							<table class="content second">
-								<tr>
-									<td class="Subtitle" style="width: 30%;">프로젝트 소개</td>
-									<td>
-									</td>
-								</tr>
-								<tr>
-									<td class="Subtitle">주요기능소개</td>
-									<td>짜별로 각 루틴의 달성 여부, 할 일 목록, 시간 단위 일정 기입하기, 월별로 각 루틴의 달성 여부를 한눈에 확인하기</td>
-								</tr>
-								<tr>
-									<td class="Subtitle">사용한 기술</td>
-									<td>
-										Frontend: <i class="fa-brands fa-html5"></i> HTML, <i class="fa-brands fa-css3"></i> CSS<br>
-										Backend:  <br>
-										Database: <br>
-										Deployment: 
-									</td>
-								</tr>
-							</table>
-						<a href="#" class="btn btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
-						<a href="#" class="btn btn-primary">URL</a>
-					</div>	  
-				</div>
-			</div>
+		  </div>
+		  {% endfor %}
 		</div>
-	</div>
+	  
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
 	<div class="container text-center fourth">
 		<h1 class="sectionTitle"><i class="fa-solid fa-list-check"></i> &nbsp;&nbsp;Career</h1>
 		<div class="career row">
@@ -327,34 +200,96 @@
 				<table class="content fourth">
 					<tr  >
 						<td class="Subtitle" style=" width: 20vw; ">도서</td>
-						<td style=" width: 70vw;">
+						<td style=" width: 50vw;" colspan="2">
 							책제목,	출판연도 /저자/ 배운점/ 적용점 <br>
 							책제목,	출판연도 /저자/ 배운점/ 적용점 <br>
 						</td>
 					</tr>
 					<tr>
-						<td class="Subtitle">교육과정</td>
-						<td>24.1.17~7.17 국비지원웹개발자양성과정 에이콘아카데미 송정우강사 배운점 성과</td>
+						<td class="Subtitle" rowspan="3">교육과정</td>
+						<td>2020. 평범한 개발자 </td>
+						<td> <i></i>Dart <i></i>Flutter 
+							<i class="fa-brands fa-apple"></i>macOS</td>
 					</tr>
 					<tr>
-						<td class="Subtitle">대외 활동</td>
-						<td></td>
+						
+						<td>24.1.17~7.17 국비지원웹개발자양성과정 에이콘아카데미 송정우강사 배운점 성과</td>
+						<td>
+							<i class="fa-brands fa-html5"></i> HTML 
+							<i class="fa-brands fa-css3"></i> CSS
+							<i class="fa-brands fa-js"></i> JavaScript <br>
+							<i class="fa-brands fa-java"></i> JAVA 
+							JSP 
+							<i class="fa-brands fa-node"></i> Node <br>
+							<i></i>Spring
+							<i></i>SpringBoot
+							<i></i>Tomcat<br>
+							<i></i>Oracle
+							<i></i>MySQL
+							<i></i>Eclips<br>
+							<i></i>Visual Studio Code
+							<i class="fa-brands fa-react"></i>reacat
+							<i class="fa-brands fa-vuejs"></i>vue.js <br>
+							<i class="fa-brands fa-github"></i>Github
+							<i class="fa-brands fa-windows"></i>Window
+							figma
+						</td>
+					</tr>
+					<tr>
+						<td>추후교육계획 </td>
+						<td> 
+							<i class="fa-brands fa-python"></i> Python 
+							TypeScript
+							Shell<br>
+							Rust
+							<i class="fa-brands fa-sass"></i> sass 
+							Next.js <br>
+							애자일
+							스크럼
+							칸반<br>
+							C#
+							<i class="fa-brands fa-docker"></i>Docker
+							 Kubernetes<br>
+							 NestJS
+							 Nginx
+							<i class="fa-brands fa-aws"></i>AWS <br>
+							GitHub Actions
+							<i class="fa-brands fa-android"></i>안드로이드
+							<i class="fa-brands fa-linux"></i> Linux 
+						</td>
+					</tr>
+					<tr>
+						<td class="Subtitle" rowspan="3">대외 활동</td>
+						<td>깃허브 블로그 운영</td>
+						<td>
+							<i></i>Ruby on Rails
+							<i class="fa-brands fa-markdown"></i>MarkDown </td>
+					</tr>
+					<tr>
+						<td>유튜브 운영</td>
+						<td>Vllo </td>
+					</tr>
+					<tr>
+						<td>깃허브 운영</td>
+						<td> </td>
 					</tr>
 					<tr>
 						<td class="Subtitle">컨퍼런스</td>
+						<td ></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td class="Subtitle">세미나</td>
+						<td ></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td class="Subtitle">그 외 경험</td>
-						<td>
+						<td >
 							2011~2023 사회복지관 총무팀 근무 배운점<br>
 							2020~2024 포천시 생활체육 탁구선수로 활동 배운점<br>
-
-						</td>
+							</td>
+							<td></td>
 					</tr>
 				</table>
 			</div>

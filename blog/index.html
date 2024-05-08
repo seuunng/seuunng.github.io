@@ -15,7 +15,7 @@ paginate: true
     </h2>
 
     <div class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y년 %-m월 %-d일' }}</time>
       {%- if jekyll.environment == "production" and site.disqus -%}
         <span> • </span>
         <a class="comment-count" href="{{ post.url | relative_url }}#disqus_thread">

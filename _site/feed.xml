@@ -2,25 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <description>한걸음씩 성실하고 부지런하게 차곡차곡 쌓는 중 입니다.</description>
+    <description>한걸음씩 바지런히 성실하게 차곡차곡</description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-	<lastBuildDate>Tue, 07 May 2024 11:00:00 +0900</lastBuildDate>
+	<lastBuildDate>Fri, 03 May 2024 11:00:00 +0900</lastBuildDate>
 	
-	<item>
-		<title>구글 서버엔진 등록</title>
-        
-        
-            <description>&lt;h2 id=&quot;구글-검색엔진-등록하기&quot;&gt;구글 검색엔진 등록하기&lt;/h2&gt;
-&lt;p&gt;검색엔진을 등록하는 일련에 과정은 다음과 같았다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 07 May 2024 11:00:00 +0900</pubDate>
-        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/07/%EC%84%9C%EB%B2%84%EC%97%94%EC%A7%84%EB%93%B1%EB%A1%9D/</link>
-        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/07/%EC%84%9C%EB%B2%84%EC%97%94%EC%A7%84%EB%93%B1%EB%A1%9D/</guid>
-      </item>
-    
 	<item>
 		<title>비동기식 코드 순서 제어하기</title>
         
@@ -33,17 +19,6 @@
       </item>
     
 	<item>
-		<title>깃허브 블로그 접어야하나 고민하게 한 Paginator</title>
-        
-        
-            <description>깃허브 블로그 디렉토리 정리 및 수정 계획, 엄청 마음고생시킨 Paginator 문제 해결 과정</description>
-        
-        <pubDate>Thu, 02 May 2024 13:00:00 +0900</pubDate>
-        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/</link>
-        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/02/myblog-directory-update-copy/</guid>
-      </item>
-    
-	<item>
 		<title>익숙하지만 낯선 코드, 접근제한자와 Java키워드</title>
         
         
@@ -52,17 +27,6 @@
         <pubDate>Wed, 01 May 2024 21:00:00 +0900</pubDate>
         <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</link>
         <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</guid>
-      </item>
-    
-	<item>
-		<title>엉망진창 깃허브 블로그 만들기 도전!</title>
-        
-        
-            <description>깃허브 블로그 만들면서 처음 본 단어 공부하기</description>
-        
-        <pubDate>Tue, 30 Apr 2024 22:00:00 +0900</pubDate>
-        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</link>
-        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/04/30/My-Journey-to-Create-a-GitHub-Blog/</guid>
       </item>
     
 	<item>
