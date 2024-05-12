@@ -32,7 +32,7 @@
   --body-color: var(--gray-700);
   --body-bg: #fff;
 
-  --text-font: Times, "Times New Roman", "Free Serif", "Noto Serif", TimesNewRomanPSMT, "Droid Serif";
+  --text-font: "Ownglyph_Dailyokja-Rg", Times, "Times New Roman", "Free Serif", "Noto Serif", TimesNewRomanPSMT, "Droid Serif";
 
   --link-color: var(--blue);
   --link-hover-color: #1c7ed6;
@@ -50,6 +50,12 @@
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
 }
+
+$customFont: "Ownglyph_Dailyokja-Rg";
+$serif: $customFont, Georgia, Times, serif !default;
+$sans-serif: $customFont, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+"Helvetica Nenu", "Lucoda Grande", Arial, sans-serif !default;
+$monospace: $customFont, Monaco, Consolas, "Lucida Console", monospace !default;
 
 @media (prefers-color-scheme: dark) {
   :root {

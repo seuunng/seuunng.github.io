@@ -70,6 +70,31 @@ layout: about
 	td, th {
     height: 40px;
 	padding: 10px;
+	text-align: left;
+	}
+	span.skills_learned {
+	font-size: 11px;
+	margin-left: 20px;
+	}
+	a {
+	color: var(--link-color);
+	text-decoration: none;
+	}
+	a:hover {
+	color: #666;
+	transition: transform 0.2s ease; /* 호버에 대한 변화를 부드럽게 만들기 위한 transition 추가 */
+	transform: scale(1.1); /* 텍스트 크기를 105%로 증가시킵니다. */
+	}
+	span.project-title {
+	font-weight: bold; /* 굵은 글꼴 */
+    font-size: 1.5em; /* 크기 조정 */
+	text-align: center;
+	display: block; /* block 레벨 요소로 만들어 전체 너비를 차지하게 함 */
+	}
+	.project-button {
+	text-align: right; /* 텍스트를 오른쪽 정렬 */
+	display: block; /* block 레벨 요소로 만들어 전체 너비를 차지하게 함 */
+	margin-right: 30px;
 	}
 </style>
 </head>
@@ -142,7 +167,13 @@ layout: about
 	<div id="carouselExampleCaptions" class="container text-center third carousel slide">
 		<div class="carousel-indicators">
 		  {% for project in site.data.projects %}
-		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
+		  <button type="button" 
+		  data-bs-target="#carouselExampleCaptions" 
+		  data-bs-slide-to="{{ forloop.index0 }}" 
+		  class="{% if forloop.first %}active{% endif %}" 
+		  aria-current="{% if forloop.first %}true{% endif %}" 
+		  aria-label="Slide {{ forloop.index }}">
+		  </button>
 		  {% endfor %}
 		</div>
 		
@@ -154,7 +185,11 @@ layout: about
 			<div class="card">
 			  <img src="{{ project.cover_image }}" class="card-img-top" alt="{{ project.project_name }}">
 			  <div class="card-body">
-				<h5 class="card-title">{{ project.project_name }}</h5>
+				<span class="project-title">{{ project.project_name }}</span>
+				<sapn class="project-button">
+					<a href="{{ project.url }}" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i>GitHub</a>
+					<a href="{{ project.url }}" class="btn btn-secondary btn-sm">URL</a>
+				</sapn>
 				<table class="content third">
 				  <tr>
 					<td class="Subtitle" style="width: 30%;">프로젝트 소개</td>
@@ -162,22 +197,13 @@ layout: about
 				  </tr>
 				  <tr>
 					<td class="Subtitle">주요기능소개</td>
-					<td></td>
+					<td>{{ project.main_functions }}</td>
 				  </tr>
 				  <tr>
 					<td class="Subtitle">사용한 기술</td>
-					<td>
-
-						
-					</td>
-				  </tr>
-				  <tr>
-					<td colspan="2">
-						<a href="{{ project.url }}" class="btn btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
-						<a href="{{ project.url }}" class="btn btn-primary">URL</a></td>
+					<td>{{ project.skills_used }}</td>
 				  </tr>
 				</table>
-				<br><br>
 			  </div>
 			</div>
 		  </div>
@@ -207,67 +233,89 @@ layout: about
 					</tr>
 					<tr>
 						<td class="Subtitle" rowspan="3">교육과정</td>
-						<td>2020. 평범한 개발자 </td>
-						<td> <i></i>Dart <i></i>Flutter 
-							<i class="fa-brands fa-apple"></i>macOS</td>
-					</tr>
-					<tr>
-						
-						<td>24.1.17~7.17 국비지원웹개발자양성과정 에이콘아카데미 송정우강사 배운점 성과</td>
-						<td>
-							<i class="fa-brands fa-html5"></i> HTML 
-							<i class="fa-brands fa-css3"></i> CSS
-							<i class="fa-brands fa-js"></i> JavaScript <br>
-							<i class="fa-brands fa-java"></i> JAVA 
-							JSP 
-							<i class="fa-brands fa-node"></i> Node <br>
-							<i></i>Spring
-							<i></i>SpringBoot
-							<i></i>Tomcat<br>
-							<i></i>Oracle
-							<i></i>MySQL
-							<i></i>Eclips<br>
-							<i></i>Visual Studio Code
-							<i class="fa-brands fa-react"></i>reacat
-							<i class="fa-brands fa-vuejs"></i>vue.js <br>
-							<i class="fa-brands fa-github"></i>Github
-							<i class="fa-brands fa-windows"></i>Window
-							figma
+						<td>2020. 평범한 개발자 <br>
+							<span class="skills_learned">
+								<i></i>Dart <i></i>Flutter 
+								<i class="fa-brands fa-apple"></i>macOS</td>
+							</span>
+						<td> 
+
 						</td>
 					</tr>
 					<tr>
-						<td>추후교육계획 </td>
+						
+						<td>24.1.17~7.17 국비지원웹개발자양성과정 에이콘아카데미 송정우강사 <br>
+							<span class="skills_learned">
+								<i class="fa-brands fa-html5"></i> HTML 
+								<i class="fa-brands fa-css3"></i> CSS
+								<i class="fa-brands fa-js"></i> JavaScript 
+								<i class="fa-brands fa-java"></i> JAVA 
+								JSP 
+								<i class="fa-brands fa-node"></i> Node
+								<i></i>Spring
+								<i></i>SpringBoot
+								<i></i>Tomcat
+								<i></i>Oracle
+								<i></i>MySQL
+								<i></i>Eclips
+								<i></i>Visual Studio Code
+								<i class="fa-brands fa-react"></i>reacat
+								<i class="fa-brands fa-vuejs"></i>vue.js 
+								<i class="fa-brands fa-github"></i>Github
+								<i class="fa-brands fa-windows"></i>Window
+								figma
+							</span>
+						</td>
+						<td>
+							배운점 성과
+						</td>
+					</tr>
+					<tr>
+						<td>추후교육계획 <br>
+							<span class="skills_learned">
+								<i class="fa-brands fa-python"></i> Python 
+								TypeScript
+								Shell
+								Rust
+								<i class="fa-brands fa-sass"></i> sass 
+								Next.js
+								애자일
+								스크럼
+								칸반
+								C#
+								<i class="fa-brands fa-docker"></i>Docker
+								Kubernetes
+								NestJS
+								Nginx
+								<i class="fa-brands fa-aws"></i>AWS
+								GitHub Actions
+								<i class="fa-brands fa-android"></i>안드로이드
+								<i class="fa-brands fa-linux"></i> Linux 
+								Flutter
+								Dart
+							</span>
+						</td>
 						<td> 
-							<i class="fa-brands fa-python"></i> Python 
-							TypeScript
-							Shell<br>
-							Rust
-							<i class="fa-brands fa-sass"></i> sass 
-							Next.js <br>
-							애자일
-							스크럼
-							칸반<br>
-							C#
-							<i class="fa-brands fa-docker"></i>Docker
-							 Kubernetes<br>
-							 NestJS
-							 Nginx
-							<i class="fa-brands fa-aws"></i>AWS <br>
-							GitHub Actions
-							<i class="fa-brands fa-android"></i>안드로이드
-							<i class="fa-brands fa-linux"></i> Linux 
+							
 						</td>
 					</tr>
 					<tr>
 						<td class="Subtitle" rowspan="3">대외 활동</td>
-						<td>깃허브 블로그 운영</td>
+						<td>깃허브 블로그 운영<br>
+							<span class="skills_learned">
+								<i></i>Ruby on Rails
+								<i class="fa-brands fa-markdown"></i>MarkDown 
+							</span>
+						</td>
 						<td>
-							<i></i>Ruby on Rails
-							<i class="fa-brands fa-markdown"></i>MarkDown </td>
+						</td>
 					</tr>
 					<tr>
-						<td>유튜브 운영</td>
-						<td>Vllo </td>
+						<td>유튜브 운영<br>
+							<span class="skills_learned">
+								Vllo</td>
+							</span>
+						<td> </td>
 					</tr>
 					<tr>
 						<td>깃허브 운영</td>

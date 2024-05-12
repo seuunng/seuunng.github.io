@@ -2,7 +2,9 @@
   description: A simple and beautiful, powerful diary for lazybones like me.
   url: /project/diaryProject/
   cover_image: assets/images/project.jpg
-  period: 2024
+  period: 2024 
+  main_functions: 
+  skills_used:
 - project_name: 깃허브페이지개발-포트폴리오
   description: 공부와 성장의 기록
   url: /project/gitpageBlog/

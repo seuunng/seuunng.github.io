@@ -10,6 +10,40 @@
 
     
     <url>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/10/vsCode-%EB%8B%A8%EC%B6%95%ED%82%A4/</loc>
+        
+        
+        <lastmod>2024-05-10T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/</loc>
+        
+        
+        <lastmod>2024-05-09T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/logs/gitpageBlog/2024-05-08-%ED%94%84%EB%A1%9C%ED%95%84%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</loc>
         
         
@@ -44,7 +78,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy/</loc>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy-2/</loc>
         
         
         <lastmod>2024-05-03T11:00:00+09:00</lastmod>
@@ -61,7 +95,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-03-myblog-directory-update/</loc>
+        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-02-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%ED%84%B0/</loc>
         
         
         <lastmod>2024-05-02T13:00:00+09:00</lastmod>
@@ -72,7 +106,24 @@
         
 
         
-        <priority>1.0</priority>
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-03-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%A0%95%EB%A6%AC/</loc>
+        
+        
+        <lastmod>2024-05-02T13:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
         
 
     </url>
@@ -112,7 +163,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/logs/gitpageBlog/2024-04-30-My-Journey-to-Create-a-GitHub-Blog/</loc>
+        <loc>http://localhost:4000/logs/gitpageBlog/2024-04-30-%EA%B9%83%ED%97%88%EB%B8%8C%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
         
         
         <lastmod>2024-04-30T22:00:00+09:00</lastmod>
@@ -123,7 +174,7 @@
         
 
         
-        <priority>1.0</priority>
+        <priority>0.5</priority>
         
 
     </url>

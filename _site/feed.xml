@@ -5,8 +5,30 @@
     <description>한걸음씩 바지런히 성실하게 차곡차곡</description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-	<lastBuildDate>Fri, 03 May 2024 11:00:00 +0900</lastBuildDate>
+	<lastBuildDate>Fri, 10 May 2024 11:00:00 +0900</lastBuildDate>
 	
+	<item>
+		<title>Visual Studio Code 단축키 총집합</title>
+        
+        
+            <description>내가 볼려고 정리한 Visual Studio Code 단축키 총집합</description>
+        
+        <pubDate>Fri, 10 May 2024 11:00:00 +0900</pubDate>
+        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/10/vsCode-%EB%8B%A8%EC%B6%95%ED%82%A4/</link>
+        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/10/vsCode-%EB%8B%A8%EC%B6%95%ED%82%A4/</guid>
+      </item>
+    
+	<item>
+		<title>소프트웨어 설계 문제에 대한 해결책하는 디자인 패턴</title>
+        
+        
+            <description>싱클톤 패턴말고 다른 디자인 패턴도 있을까?</description>
+        
+        <pubDate>Thu, 09 May 2024 11:00:00 +0900</pubDate>
+        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/</link>
+        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/</guid>
+      </item>
+    
 	<item>
 		<title>비동기식 코드 순서 제어하기</title>
         
@@ -14,8 +36,8 @@
             <description>동기식 코드와 비동기식 코드의 비교, 비동기식 코드 순서 제어하는 이유와 방법.</description>
         
         <pubDate>Fri, 03 May 2024 11:00:00 +0900</pubDate>
-        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy/</link>
-        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy/</guid>
+        <link>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy-2/</guid>
       </item>
     
 	<item>
