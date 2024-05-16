@@ -1,32 +1,32 @@
 - project_name: A Diary for the Lazybones
   description: A simple and beautiful, powerful diary for lazybones like me.
   url: /project/diaryProject/
+  github: https://github.com/seuunng/seuunng.github.io.git
   cover_image: assets/images/project.jpg
   period: 2024 
-  main_functions: 
-  skills_used:
+  main_functions: 자동일기 생성
+  skills_used: flutter, dart, figma
 - project_name: 깃허브페이지개발-포트폴리오
   description: 공부와 성장의 기록
   url: /project/gitpageBlog/
+  github: https://github.com/seuunng/seuunng.github.io.git
   cover_image: assets/images/gitpageBlog.png
   period: 2024
+  main_functions: 프로젝트 기록, 블로그, 프로필
+  skills_used: jeklly, html, markdown
 - project_name: ERPsystem
   description: 소상공인을 위한 ERP프로그램
   url: /project/erpSystem/
-  cover_image: assets/images/gitpageBlog.png
+  github: https://github.com/seuunng/acornProject.git
+  cover_image: assets/images/ERP.png
   period: 2024
+  main_functions: 고객현황, 재고관리, 예약관리 
+  skills_used: Springboot, react, node.js
 - project_name: 냉장고정리해줘
   description: 냉장고를 정리하는 어플
   url: /project/sodwkdrh/
+  github: https://github.com/seuunng/seuunng.github.io.git
   cover_image: assets/images/gitpageBlog.png
   period: 2024
-- project_name: 팀프로젝트2
-  description: 공부와 성장의 기록
-  url: /project/gitpageBlog/
-  cover_image: assets/images/gitpageBlog.png
-  period: 2024
-- project_name: 팀프로젝트3 
-  description: 공부와 성장의 기록
-  url: /project/gitpageBlog/
-  cover_image: assets/images/gitpageBlog.png
-  period: 2024
+  main_functions: 냉장고관리, 장보기목록
+  skills_used: Flutter, Dart
