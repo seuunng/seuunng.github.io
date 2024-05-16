@@ -25,11 +25,28 @@
 <meta property="twitter:title" content="솔리드패턴" />
 <meta name="google-site-verification" content="S3Y0zt33ey8S5mMWq8hgaxqqfGUOfK0LgytcSTbfius" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-16T19:45:25+09:00","datePublished":"2024-05-13T11:00:00+09:00","description":"개발 방법론, 개발 원칙, 아키텍처 패턴, 디자인 패턴은 다 비슷해서 구분이 어렵지만, 각각의 목적과 적용 범위에서 차이가 있다. 여기서 각 요소가 어떻게 다른지 구분해 보겠다.","headline":"솔리드패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/13/%EC%86%94%EB%A6%AC%EB%93%9C%ED%8C%A8%ED%84%B4/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/13/%EC%86%94%EB%A6%AC%EB%93%9C%ED%8C%A8%ED%84%B4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-17T01:09:33+09:00","datePublished":"2024-05-13T11:00:00+09:00","description":"개발 방법론, 개발 원칙, 아키텍처 패턴, 디자인 패턴은 다 비슷해서 구분이 어렵지만, 각각의 목적과 적용 범위에서 차이가 있다. 여기서 각 요소가 어떻게 다른지 구분해 보겠다.","headline":"솔리드패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/13/%EC%86%94%EB%A6%AC%EB%93%9C%ED%8C%A8%ED%84%B4/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/13/%EC%86%94%EB%A6%AC%EB%93%9C%ED%8C%A8%ED%84%B4/"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="결국은 개발자" />
 <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
-</head>
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("topBtn").style.display = "block";
+    } else {
+      document.getElementById("topBtn").style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  </script></head>
 
 
   <body>
@@ -70,8 +87,8 @@
   <!-- Post 본문 을 표시 -->
 <article class="post">
   <h1 class="post-title">솔리드패턴</h1>
-  <div class="post-meta"><time datetime="2024-05-13T11:00:00+09:00" itemprop="datePublished">13 May 2024</time><span> ~ </span><time datetime="2024-05-16T19:45:25+09:00" itemprop="dateModified">
-        16 May 2024
+  <div class="post-meta"><time datetime="2024-05-13T11:00:00+09:00" itemprop="datePublished">13 May 2024</time><span> ~ </span><time datetime="2024-05-17T01:09:33+09:00" itemprop="dateModified">
+        17 May 2024
       </time><span> • </span>
       
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,6 +275,7 @@ D: **Dependency</strong> Inversion Principle (의존성 역전 원칙)</p>
   </ul>
 </aside>
 
+<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
 
 </main>
@@ -268,6 +286,24 @@ D: **Dependency</strong> Inversion Principle (의존성 역전 원칙)</p>
   </small>
 </footer></div>
       <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+<div  class="toc-wrapper">
+  <h2 class="toc-title">Table of Contents</h2>
+    <nav class="toc-nav">
+      <ul class="toc">
+  <li><a href="#solid-원칙">SOLID 원칙</a>
+    <ul>
+      <li><a href="#단일-책임-원칙">단일 책임 원칙</a></li>
+      <li><a href="#개방폐쇄-원칙">개방/폐쇄 원칙</a></li>
+      <li><a href="#리스코프-치환-원칙">리스코프 치환 원칙</a></li>
+      <li><a href="#인터페이스-분리-원칙">인터페이스 분리 원칙</a></li>
+      <li><a href="#의존성-역전-원칙">의존성 역전 원칙</a></li>
+    </ul>
+  </li>
+  <li><a href="#마무리">마무리</a></li>
+</ul>
+  </nav>
+</div>
+
 </div>
     </div>
 

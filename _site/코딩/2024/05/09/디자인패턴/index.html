@@ -25,11 +25,28 @@
 <meta property="twitter:title" content="소프트웨어 설계 문제에 대한 해결책하는 디자인 패턴" />
 <meta name="google-site-verification" content="S3Y0zt33ey8S5mMWq8hgaxqqfGUOfK0LgytcSTbfius" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-13T01:12:33+09:00","datePublished":"2024-05-09T11:00:00+09:00","description":"디자인패턴의 종류와 사용예시, 구현방법","headline":"소프트웨어 설계 문제에 대한 해결책하는 디자인 패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-17T01:09:47+09:00","datePublished":"2024-05-09T11:00:00+09:00","description":"디자인패턴의 종류와 사용예시, 구현방법","headline":"소프트웨어 설계 문제에 대한 해결책하는 디자인 패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/09/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="결국은 개발자" />
 <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
-</head>
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("topBtn").style.display = "block";
+    } else {
+      document.getElementById("topBtn").style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  </script></head>
 
 
   <body>
@@ -70,8 +87,8 @@
   <!-- Post 본문 을 표시 -->
 <article class="post">
   <h1 class="post-title">소프트웨어 설계 문제에 대한 해결책하는 디자인 패턴</h1>
-  <div class="post-meta"><time datetime="2024-05-09T11:00:00+09:00" itemprop="datePublished">9 May 2024</time><span> ~ </span><time datetime="2024-05-13T01:12:33+09:00" itemprop="dateModified">
-        13 May 2024
+  <div class="post-meta"><time datetime="2024-05-09T11:00:00+09:00" itemprop="datePublished">9 May 2024</time><span> ~ </span><time datetime="2024-05-17T01:09:47+09:00" itemprop="dateModified">
+        17 May 2024
       </time><span> • </span>
       
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -574,6 +591,7 @@ abstract class Creator {
   </ul>
 </aside>
 
+<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
 
 </main>
@@ -597,7 +615,6 @@ abstract class Creator {
   </li>
   <li><a href="#마무리">마무리</a></li>
 </ul>
-
   </nav>
 </div>
 
