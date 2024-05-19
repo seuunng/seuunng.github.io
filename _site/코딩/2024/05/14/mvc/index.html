@@ -14,8 +14,8 @@
 <meta property="og:title" content="mvc패턴" />
 <meta name="author" content="개발자씅" />
 <meta property="og:locale" content="ko" />
-<meta name="description" content="아키텍처 패턴 (Architectural Pattern) 소프트웨어의 전체 구조를 설계하는 데 사용되는 패턴이다. 시스템의 구성요소들이 어떻게 상호 작용할지에 대한 고수준의 패턴을 제공하며, 시스템의 구성 요소들이 어떻게 배열되는지, 큰 그림에서 시스템을 조직화하는 방법에 대한 지침을 준다. 아키텍처 패턴도 디자인 패턴 처럼 특정 문제 해결을 위해 자주 사용되는 설계 방식을규정한 것인데, 아키텍처 패턴은 소프트웨어 시스템의 전체 구조를 정의하는 개념이다. 반면 디자인패턴은 클래스와 객체 간의 관계와 상호작용을 규정한다. 아키텍처 패턴과 다자인 패턴은 각각 다른 수준에서 소프트웨어 설계를 최적화하고 문제를 해결하기 위한 중요한 도구로 사용되고 있다. 오늘은 아키텍처 패턴 중에서 MVC패턴에 대해서 공부해보려고 한다." />
-<meta property="og:description" content="아키텍처 패턴 (Architectural Pattern) 소프트웨어의 전체 구조를 설계하는 데 사용되는 패턴이다. 시스템의 구성요소들이 어떻게 상호 작용할지에 대한 고수준의 패턴을 제공하며, 시스템의 구성 요소들이 어떻게 배열되는지, 큰 그림에서 시스템을 조직화하는 방법에 대한 지침을 준다. 아키텍처 패턴도 디자인 패턴 처럼 특정 문제 해결을 위해 자주 사용되는 설계 방식을규정한 것인데, 아키텍처 패턴은 소프트웨어 시스템의 전체 구조를 정의하는 개념이다. 반면 디자인패턴은 클래스와 객체 간의 관계와 상호작용을 규정한다. 아키텍처 패턴과 다자인 패턴은 각각 다른 수준에서 소프트웨어 설계를 최적화하고 문제를 해결하기 위한 중요한 도구로 사용되고 있다. 오늘은 아키텍처 패턴 중에서 MVC패턴에 대해서 공부해보려고 한다." />
+<meta name="description" content="아키텍처 패턴중 MVC패턴에 대한 탐구" />
+<meta property="og:description" content="아키텍처 패턴중 MVC패턴에 대한 탐구" />
 <link rel="canonical" href="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/" />
 <meta property="og:url" content="http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/" />
 <meta property="og:site_name" content="결국은 개발자" />
@@ -25,7 +25,7 @@
 <meta property="twitter:title" content="mvc패턴" />
 <meta name="google-site-verification" content="S3Y0zt33ey8S5mMWq8hgaxqqfGUOfK0LgytcSTbfius" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-17T01:09:19+09:00","datePublished":"2024-05-14T11:00:00+09:00","description":"아키텍처 패턴 (Architectural Pattern) 소프트웨어의 전체 구조를 설계하는 데 사용되는 패턴이다. 시스템의 구성요소들이 어떻게 상호 작용할지에 대한 고수준의 패턴을 제공하며, 시스템의 구성 요소들이 어떻게 배열되는지, 큰 그림에서 시스템을 조직화하는 방법에 대한 지침을 준다. 아키텍처 패턴도 디자인 패턴 처럼 특정 문제 해결을 위해 자주 사용되는 설계 방식을규정한 것인데, 아키텍처 패턴은 소프트웨어 시스템의 전체 구조를 정의하는 개념이다. 반면 디자인패턴은 클래스와 객체 간의 관계와 상호작용을 규정한다. 아키텍처 패턴과 다자인 패턴은 각각 다른 수준에서 소프트웨어 설계를 최적화하고 문제를 해결하기 위한 중요한 도구로 사용되고 있다. 오늘은 아키텍처 패턴 중에서 MVC패턴에 대해서 공부해보려고 한다.","headline":"mvc패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"개발자씅"},"dateModified":"2024-05-20T00:09:04+09:00","datePublished":"2024-05-14T11:00:00+09:00","description":"아키텍처 패턴중 MVC패턴에 대한 탐구","headline":"mvc패턴","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"개발자씅"},"url":"http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/14/mvc/"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="결국은 개발자" />
 <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
@@ -87,8 +87,8 @@
   <!-- Post 본문 을 표시 -->
 <article class="post">
   <h1 class="post-title">mvc패턴</h1>
-  <div class="post-meta"><time datetime="2024-05-14T11:00:00+09:00" itemprop="datePublished">14 May 2024</time><span> ~ </span><time datetime="2024-05-17T01:09:19+09:00" itemprop="dateModified">
-        17 May 2024
+  <div class="post-meta"><time datetime="2024-05-14T11:00:00+09:00" itemprop="datePublished">14 May 2024</time><span> ~ </span><time datetime="2024-05-20T00:09:04+09:00" itemprop="dateModified">
+        20 May 2024
       </time><span> • </span>
       
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -158,8 +158,10 @@
     <ol>
       <li>사용자가 브러우저를 통해 요청을 보냄</li>
       <li>요청이 DispatcherServlet으로 전달</li>
-      <li>DispatcherServlet은 요청을 처리할 컨트롤러를 찾기 위해 핸드러 매핑을 사용</li>
-      <li></li>
+      <li>DispatcherServlet은 요청을 처리할 컨트롤러를 찾기 위해 handlerMapping을 사용</li>
+      <li>Controller가 요청을 처리</li>
+      <li>필요한 데이터를 모델에 담아 View에 전달</li>
+      <li>viewResolver 논리적 View 이름을 실제 View로 변환, 최종 결과를 사용자에게 반환</li>
     </ol>
   </li>
 </ul>
@@ -182,9 +184,9 @@
   <ul class="related-posts">
     
       <li>
-        <a href="/%EC%BD%94%EB%94%A9/2024/05/15/dto-dao-bo-vo/">
+        <a href="/%EC%BD%94%EB%94%A9/2024/05/16/dto-dao-bo-vo/">
           DTO DAO VO BO
-          <small><time datetime="2024-05-15T11:00:00+09:00">15 May 2024</time></small>
+          <small><time datetime="2024-05-16T11:00:00+09:00">16 May 2024</time></small>
         </a>
       </li>
       

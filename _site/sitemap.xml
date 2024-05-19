@@ -10,10 +10,27 @@
 
     
     <url>
-        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/15/dto-dao-bo-vo/</loc>
+        <loc>http://localhost:4000/logs/todoList/2024-05-20-todoList%EA%B8%B0%ED%9A%8D/</loc>
         
         
-        <lastmod>2024-05-15T11:00:00+09:00</lastmod>
+        <lastmod>2024-05-19T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/16/dto-dao-bo-vo/</loc>
+        
+        
+        <lastmod>2024-05-16T11:00:00+09:00</lastmod>
         
 
         
@@ -146,23 +163,6 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-03-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%A0%95%EB%A6%AC/</loc>
-        
-        
-        <lastmod>2024-05-02T13:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>daily</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/logs/gitpageBlog/2024-05-02-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%ED%84%B0/</loc>
         
         
@@ -180,10 +180,10 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/logs/diaryProject/2024-05-02-TEST/</loc>
+        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-03-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%A0%95%EB%A6%AC/</loc>
         
         
-        <lastmod>2024-05-02T11:00:00+09:00</lastmod>
+        <lastmod>2024-05-02T13:00:00+09:00</lastmod>
         
 
         
@@ -209,6 +209,40 @@
 
         
         <priority>1.0</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/logs/ERPsystem/2024-05-02-TEST/</loc>
+        
+        
+        <lastmod>2024-04-30T22:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/logs/diaryProject/2024-05-02-TEST/</loc>
+        
+        
+        <lastmod>2024-04-30T22:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
         
 
     </url>
