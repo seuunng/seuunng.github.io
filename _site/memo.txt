@@ -7,3 +7,9 @@ bundle update
 bundle install
 
 bundle exec jekyll serve
+
+git checkout main
+git checkout about_renewal
+git checkout dashBoard_renewal
+git checkout postList_renewal
+git checkout projectList_renewal
