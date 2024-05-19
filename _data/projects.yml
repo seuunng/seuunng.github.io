@@ -1,32 +1,40 @@
-- project_name: A Diary for the Lazybones
-  description: A simple and beautiful, powerful diary for lazybones like me.
+- project_name: 깃허브블로그
+  description: 공부와 성장의 기록
+  main_functions: 프로젝트 기록, 블로그, 프로필
+  skills_used: Jeklly, Html, CSS, Markdown, Github
+  url: /project/gitpageBlog/
+  github: https://github.com/seuunng/seuunng.github.io.git
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024_05
+- project_name: 투두리스트
+  description: 할일목록부터 일정관리까지
+  main_functions: 할일목록, 반복, 공유
+  skills_used: Vue.js, Springboot, 
+  url: /project/todoList/
+  github: https://github.com/seuunng/seuunng.github.io.git
+  cover_image: assets/images/gitpageBlog.png
+  period: 2024_06
+- project_name: 귀차니즘을 위한 자동일기
+  description: 자동일기장
+  main_functions: AI일기작성, 오늘 찍은 사진일기 자동생성
+  skills_used: Flutter, Dart
   url: /project/diaryProject/
   github: https://github.com/seuunng/seuunng.github.io.git
   cover_image: assets/images/project.jpg
   period: 2024 
-  main_functions: 자동일기 생성
-  skills_used: flutter, dart, figma
-- project_name: 깃허브페이지개발-포트폴리오
-  description: 공부와 성장의 기록
-  url: /project/gitpageBlog/
-  github: https://github.com/seuunng/seuunng.github.io.git
-  cover_image: assets/images/gitpageBlog.png
-  period: 2024
-  main_functions: 프로젝트 기록, 블로그, 프로필
-  skills_used: jeklly, html, markdown
 - project_name: ERPsystem
   description: 소상공인을 위한 ERP프로그램
-  url: /project/erpSystem/
+  main_functions: 고객현황, 재고관리, 예약관리 
+  skills_used: Springboot, react, node.js
+  url: /project/ERPsystem/
   github: https://github.com/seuunng/acornProject.git
   cover_image: assets/images/ERP.png
   period: 2024
-  main_functions: 고객현황, 재고관리, 예약관리 
-  skills_used: Springboot, react, node.js
-- project_name: 냉장고정리해줘
-  description: 냉장고를 정리하는 어플
+- project_name: 냉장고정리어플
+  description: 장보기 부터 냉장고 관리까지
+  main_functions: 냉장고관리, 장보기목록
+  skills_used: Flutter, Dart
   url: /project/sodwkdrh/
   github: https://github.com/seuunng/seuunng.github.io.git
   cover_image: assets/images/gitpageBlog.png
   period: 2024
-  main_functions: 냉장고관리, 장보기목록
-  skills_used: Flutter, Dart
