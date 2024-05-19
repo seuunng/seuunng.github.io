@@ -10,6 +10,23 @@
 
     
     <url>
+        <loc>http://localhost:4000/logs/gitpageBlog/2024-05-19-%EB%89%B4%EB%B8%8C%EB%9E%9C%EC%B9%98%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
+        
+        
+        <lastmod>2024-05-19T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>daily</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/logs/todoList/2024-05-20-todoList%EA%B8%B0%ED%9A%8D/</loc>
         
         
@@ -146,7 +163,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4-copy-2/</loc>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/03/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D%EC%BD%94%EB%93%9C%EC%88%9C%EC%84%9C%EC%A0%9C%EC%96%B4/</loc>
         
         
         <lastmod>2024-05-03T11:00:00+09:00</lastmod>
@@ -197,7 +214,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword-copy/</loc>
+        <loc>http://localhost:4000/%EC%BD%94%EB%94%A9/2024/05/01/access-modifier-JavaKeyword/</loc>
         
         
         <lastmod>2024-05-01T21:00:00+09:00</lastmod>
