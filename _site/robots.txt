@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://seuunng.github.io/
-
-#DaumWebMasterTool:c48fe4bd35fdb9a0e427be26db6eb93031cb0d0078de2e845b7e6225e0de22a9:QHt/MEMtgF00fe1dLXK0Ug==
