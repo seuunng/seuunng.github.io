@@ -7,9 +7,15 @@
     <!-- Google Fonts (Inter) 및 기본 스타일 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @font-face {
+            font-family: 'GounBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: GounBatang', 'Inter', sans-serif; /* 고운 바탕체 적용 */
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -63,6 +69,7 @@
             background-color: rgba(92, 64, 51, 0.65); 
             z-index: 0;
         }
+        
         .hero-content {
             position: relative;
             z-index: 1; 
