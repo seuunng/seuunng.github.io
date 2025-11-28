@@ -4,119 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 자동 일기 앱: 흘려보낸 하루를 빛나는 기록으로</title>
-   <style>
-        /* 기본 스타일 및 반응형 디자인 */
+    <!-- Google Fonts (Inter) 및 기본 스타일 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-            overflow-x: hidden; /* 가로 스크롤 방지 */
+            background-color: #fcfcfc; /* 깨끗한 화이트 */
+            color: #3f3f46; /* Stone 800: 다크 우드 톤 텍스트 */
+            overflow-x: hidden;
         }
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .logo {
-            max-width: 150px; /* 로고 크기 조정 */
-            height: auto;
-            margin-bottom: 10px;
-        }
+        /* 메인 히어로 섹션 스타일 */
         .main-hero {
             position: relative;
             width: 100%;
-            height: 600px; /* 메인 이미지 섹션 높이 */
+            min-height: 600px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white; /* 텍스트 색상 */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 텍스트 그림자 */
+            color: white;
+            background: url('write_main.png') no-repeat center center/cover;
         }
-        .main-hero::before { /* 배경 이미지 오버레이 (텍스트 가독성 향상) */
+        .main-hero::before { 
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('write_main.png') no-repeat center center/cover; /* 메인 이미지 경로 */
-            filter: brightness(0.7); /* 이미지 약간 어둡게 처리 */
-            z-index: -1;
+            /* 다크 딥 그린 오버레이로 변경 */
+            background-color: rgba(4, 51, 23, 0.55); 
+            z-index: 0;
         }
         .hero-content {
-            z-index: 1; /* 텍스트가 이미지 위에 오도록 */
+            position: relative;
+            z-index: 1; 
             text-align: center;
             padding: 0 20px;
+            max-width: 800px;
         }
-        .hero-content h1 {
-            font-size: 2.8em; /* 헤드라인 크기 */
-            margin-bottom: 15px;
-            color: white; /* 텍스트 색상 */
-        }
-        .hero-content p {
-            font-size: 1.3em; /* 서브 카피 크기 */
-            margin-bottom: 25px;
-            color: white; /* 텍스트 색상 */
-        }
+        /* CTA 버튼 스타일 */
         .cta-button {
-            display: inline-block;
-            background-color: #4CAF50; /* 초록색 버튼 */
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px; /* 둥근 버튼 */
-            font-size: 1.4em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 앱 스토어 버튼 스타일 */
+        .app-store-button {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            min-width: 200px;
+        }
+        .app-store-button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .section {
-            max-width: 800px;
-            margin: 60px auto; /* 섹션 간격 조정 */
-            padding: 0 20px;
-            text-align: left;
-        }
-        .section h3 {
-            color: #4a77e5;
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .section p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-            text-align: center;
-        }
-
-        /* 반응형 디자인 */
+        /* 반응형 폰트 및 간격 조정 */
         @media (max-width: 768px) {
-            .main-hero { height: 500px; }
-            .hero-content h1 { font-size: 2em; }
-            .hero-content p { font-size: 1em; }
-            .cta-button { padding: 12px 25px; font-size: 1.2em; }
-            .section h3 { font-size: 1.8em; }
-            .section p { font-size: 1em; }
-            .logo { max-width: 120px; }
+            .main-hero { min-height: 500px; }
+            .hero-content h1 { font-size: 2.25rem; }
+            .hero-content p { font-size: 1.125rem; }
         }
-        @media (max-width: 480px) {
-            .main-hero { height: 400px; }
-            .hero-content h1 { font-size: 1.8em; }
-            .hero-content p { font-size: 0.9em; }
-            .cta-button { padding: 10px 20px; font-size: 1em; }
-            .section h3 { font-size: 1.5em; }
+        @media (max-width: 640px) {
+            .app-stores {
+                flex-direction: column; /* 모바일에서 수직 배치 */
+            }
+            .app-store-button {
+                width: 100%; 
+                margin-bottom: 12px;
+            }
         }
     </style>
+
+</head>
+<body>
     <!-- Google tag (gtag.js), 구글 애널리틱스-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSBNVEDY42"></script>
     <script>
@@ -126,26 +99,107 @@
     
       gtag('config', 'G-KSBNVEDY42');
     </script>
-</head>
-<body>
-    <header class="header">
-        <img src="ai_logo_black.png" alt="AI 일기 앱 로고" class="logo">
+
+    <!-- 헤더: 로고 -->
+    <header class="bg-white shadow-sm py-4 text-center">
+        <!-- ai_logo_black.png 파일 경로 확인 필수 -->
+        <img src="ai_logo_black.png" alt="AI 일기 앱 로고" class="logo mx-auto w-40 sm:w-48">
     </header>
 
+    <!-- 메인 히어로 섹션 -->
     <div class="main-hero">
         <div class="hero-content">
-            <h1>매일 나의 일상을 기록합니다, 예쁘고 편하게 AI가 알아서.</h1>
-            <p>매일 나의 일상을 기록합니다, 예쁘게.<br>매일 나의 일상을 기록합니다, 편하게.</p>
-            <a href="[여기에 Google Form 또는 Typeform 링크 삽입]" class="cta-button">
+            <!-- 메인 문구 -->
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight">
+                매일 나의 일상을 기록합니다, <br class="sm:hidden"> 예쁘고 편하게 AI가 알아서.
+            </h1>
+            <!-- 서브 문구 -->
+            <p class="text-xl sm:text-2xl font-medium mb-10">
+                매일 나의 일상을 기록합니다, 예쁘게.<br>매일 나의 일상을 기록합니다, 편하게.
+            </p>
+            <!-- CTA 버튼 (카카오톡 오픈 채팅방) -->
+            <a href="https://open.kakao.com/o/sdIIOR3h" 
+               class="cta-button bg-green-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:bg-green-800 transition duration-300 ease-in-out">
                 지금 바로 베타 테스터 신청하고, 나의 하루를 되찾으세요!
             </a>
         </div>
     </div>
 
-    <div class="section">
-        <h3>더 이상 일기 쓰기를 미루지 마세요. 당신의 하루는 소중하니까요.</h3>
-        <p>피곤함, 깜빡 잊는 일, '무엇을 써야 할지' 모르는 막막함… 매번 작심삼일로 끝나는 일기 쓰기 때문에 소중한 기억을 잃고 있지는 않으신가요? 저희는 이 모든 어려움을 해결합니다.</p>
-    </div>
+    <!-- 1. 문제 제기 섹션 -->
+    <section class="max-w-4xl mx-auto py-16 px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-3xl font-bold text-green-700 mb-6 text-center">
+                더 이상 일기 쓰기를 미루지 마세요. 당신의 하루는 소중하니까요.
+            </h3>
+            <p class="text-lg text-gray-700 leading-relaxed text-center">
+                피곤함, 깜빡 잊는 일, '무엇을 써야 할지' 모르는 막막함… 매번 작심삼일로 끝나는 일기 쓰기 때문에 <br class="hidden sm:inline"> 소중한 기억을 잃고 있지는 않으신가요? 저희는 이 모든 어려움을 해결합니다.
+            </p>
+        </div>
+    </section>
 
-    </body>
+    <!-- 2. 솔루션 제시 섹션 (AI의 역할) -->
+    <section class="max-w-4xl mx-auto py-16 px-4 bg-stone-100 shadow-inner">
+        <h3 class="text-3xl font-bold text-amber-700 mb-6 text-center">
+            매일, 나도 모르게 완성되는 나의 특별한 일기.
+        </h3>
+        <p class="text-lg text-gray-700 leading-relaxed text-center mb-12">
+            AI가 당신이 찍은 사진, 방문한 장소, 들었던 음악, 관심사 등을 분석하여 하루 일과를 스토리처럼 구성합니다. <br class="hidden sm:inline"> 당신은 단지 AI가 쓴 초안에 '한 줄의 감정'만 추가하면 됩니다.
+        </p>
+        
+        <!-- (추후 여기에 AI 일기 목업 이미지나 설명 박스를 추가할 수 있습니다) -->
+        <div class="flex justify-center">
+            <div class="w-full max-w-md h-64 bg-stone-200 rounded-lg flex items-center justify-center text-gray-500 italic">
+                [여기에 AI 일기 분석 목업 이미지 (Mockup Image)를 넣을 수 있습니다]
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 최종 CTA 섹션: 사전 예약 버튼 -->
+    <section class="max-w-4xl mx-auto py-20 px-4">
+        <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+            가장 먼저 만나보세요. 지금 바로 사전 예약!
+        </h3>
+        
+        <!-- 앱 스토어 버튼을 나란히 배치하는 컨테이너 -->
+        <div class="app-stores flex flex-col sm:flex-row justify-center gap-6 mt-10">
+
+            <!-- Google Play 버튼 (다크 우드 톤) -->
+            <a href="#pre-reservation-form" 
+               class="app-store-button bg-amber-800 text-white font-semibold rounded-lg shadow-lg hover:bg-amber-700">
+                <!-- Google Play 로고 (SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 mr-3 fill-current">
+                    <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-89.9 86.6 89.9 86.6c6.9 6.3 9.7 15.9 6.4 24.6-3.2 8.7-11.4 15.1-20.8 17.5l-236.8 61.6c-5.8 1.5-12.1-.4-16.1-5L50.2 284.1c-13.6-16.1-21.7-36.9-21.7-58.4 0-21.6 8.1-42.3 21.7-58.4L218.6 42.5c4-4.6 10.3-6.5 16.1-5L475.1 149.1c9.4 2.4 17.6 8.8 20.8 17.5zM224 256c0 1.2-.2 2.3-.4 3.5l-63.4 75.3 118.8-30.8c5.4-1.4 9.1-6.6 9.1-12.3s-3.7-10.8-9.1-12.3L160.2 252.5c.2 1.2 .4 2.3 .4 3.5zm228.6-47.5L259.9 160.8l56.8 55.4 135.9 33.2c6.1 1.5 10.3 7.3 10.3 13.7s-4.2 12.2-10.3 13.7L316.7 348.8l-56.8 55.4 192.7-52.6c8.1-2.2 14.2-8.5 16.9-16.5 2.7-8-1.5-16.2-11.9-23.7L452.6 208.5z"/>
+                </svg>
+                Google Play
+            </a>
+
+            <!-- Apple Store 버튼 (다크 우드 톤) -->
+            <a href="#pre-reservation-form" 
+               class="app-store-button bg-amber-800 text-white font-semibold rounded-lg shadow-lg hover:bg-amber-700">
+                <!-- Apple Store 로고 (SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-5 h-6 mr-3 fill-current">
+                    <path d="M310.9 22.8c-1.4-1.5-3.3-2.4-5.3-2.4H78.4c-2 0-3.9 .9-5.3 2.4-1.4 1.5-2.2 3.5-2.2 5.6v455.1c0 2.1 .8 4.1 2.2 5.6 1.4 1.5 3.3 2.4 5.3 2.4h227.1c2 0 3.9-.9 5.3-2.4 1.4-1.5 2.2-3.5 2.2-5.6V28.4c0-2.1-.8-4.1-2.2-5.6zm-177 400.9c-8.9-8.9-13.8-20.7-13.8-33.3 0-12.7 4.9-24.5 13.8-33.3 8.9-8.9 20.7-13.8 33.3-13.8 12.7 0 24.5 4.9 33.3 13.8 8.9 8.9 13.8 20.7 13.8 33.3 0 12.7-4.9 24.5-13.8 33.3-8.9 8.9-20.7 13.8-33.3 13.8-12.6 0-24.4-4.9-33.3-13.8zm119.5-226.7c1.7 4.3 2.5 9 2.5 13.8 0 19.8-7.9 38.6-22 52.6-11.4 11.2-25.9 18.7-41.5 20.6-5.8 .7-11.7 .9-17.6 .9-12.8 0-25.3-1.8-37.1-5.3-13.7-4-26.6-10.4-38.1-19.1-8.3-6.1-15.9-12.9-22.3-20.5-8.5-10.2-14.9-21.7-19-34.1-2.8-8.5-4.2-17.4-4.2-26.4 0-14.3 2.6-28.5 7.8-41.5 5.2-13.1 12.8-25.3 22.8-35.8 11.9-12.5 25.8-22.3 41.5-28.8 16.5-6.9 33.9-10.2 51.5-10.2 12.7 0 25.1 1.4 36.9 4.1 13.6 3.1 26.5 7.9 38.6 14.5 10.3 5.5 19.9 12.4 28.5 20.7 8.6 8.3 15.6 17.6 21 27.6 5.5 10 9.2 20.6 11.1 31.7 1.7 10.1 2.5 20.3 2.5 30.6 0 9.1-1.3 18.2-3.8 27z"/>
+                </svg>
+                Apple Store
+            </a>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-4">
+            * '사전 예약' 버튼 클릭 시 이메일 주소를 입력하는 별도의 페이지로 연결됩니다.
+        </p>
+
+        <!-- 이메일 입력 페이지를 대체할 수 있는 앵커 -->
+        <div id="pre-reservation-form" class="mt-16 text-center border-t pt-8">
+            <h4 class="text-2xl font-semibold mb-4 text-gray-700">사전 예약 이메일 입력 (구현 예정)</h4>
+            <p class="text-gray-600">
+                실제 서비스에서는 이 부분에 이메일 주소를 받아 사전 예약을 완료하는 Google Form 또는 입력 폼을 연결/삽입해야 합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- 푸터 (다크 그린 톤) -->
+    <footer class="bg-green-900 text-white text-center py-6">
+        <p>&copy; 2024 Memory Weaver. All rights reserved. | <span class="text-gray-400">Powered by GitHub Pages</span></p>
+    </footer>
+
+</body>
 </html>
