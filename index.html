@@ -30,6 +30,28 @@
             color: white;
             background: url('write_main.png') no-repeat center center/cover;
         }
+        /* 새로 추가: 메인 이미지 스타일 (화면에 꽉차게 반응형 적용) */
+        .main-hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 화면을 채우도록 이미지 크롭 */
+            z-index: 0; 
+        }
+
+        /* 새로 추가: 오버레이 스타일 (텍스트 가독성 확보) */
+        .main-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 다크 딥 그린 오버레이 */
+            background-color: rgba(4, 51, 23, 0.55); 
+            z-index: 1;
+        }
         .main-hero::before { 
             content: "";
             position: absolute;
@@ -112,8 +134,8 @@
         <!-- 이미지 경로: images/write_main.jpg -->
         <img src="images/write_main.jpg" alt="일기 작성 배경 이미지" class="main-hero-image">
         
-        <!-- <!-- 오버레이 (텍스트 가독성 확보) -->
-        <div class="main-hero-overlay"></div>  -->
+        <!-- 오버레이 (텍스트 가독성 확보) -->
+        <div class="main-hero-overlay"></div>
         <div class="hero-content">
             <!-- 메인 문구 -->
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight">
