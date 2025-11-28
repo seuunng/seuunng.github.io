@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 자동 일기 앱: 흘려보낸 하루를 빛나는 기록으로</title>
+    <style>
+        /* 기본 스타일 설정 (노션 페이지 느낌을 줍니다) */
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f7f9fc; color: #333; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #4a77e5; margin-bottom: 10px; font-size: 2.5em; }
+        h2 { color: #555; margin-bottom: 30px; font-size: 1.2em; font-weight: normal; }
+        .cta-button { display: inline-block; background-color: #4a77e5; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 1.2em; margin-top: 20px; transition: background-color 0.3s; }
+        .cta-button:hover { background-color: #3b60c9; }
+        .section { margin: 40px 0; padding: 20px 0; border-top: 1px solid #eee; text-align: left; }
+        .section h3 { color: #4a77e5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>흘려보낸 하루가, 빛나는 나의 기록으로 돌아온다</h1>
+        <h2>AI가 당신의 하루를 기억하고, 단 한 줄의 노력으로 완벽한 일기를 완성해 드립니다.</h2>
+        
+        <a href="[여기에 Google Form 또는 Typeform 링크 삽입]" class="cta-button">
+            지금 바로 베타 테스터 신청하고, 나의 하루를 되찾으세요! (선착순 마감)
+        </a>
+
+        <div class="section">
+            <h3>더 이상 일기 쓰기를 미루지 마세요. 당신의 하루는 소중하니까요.</h3>
+            <p>피곤함, 깜빡 잊는 일, '무엇을 써야 할지' 모르는 막막함… 매번 작심삼일로 끝나는 일기 쓰기 때문에 소중한 기억을 잃고 있지는 않으신가요? 저희는 이 모든 어려움을 해결합니다.</p>
+        </div>
+        
+        <div class="section">
+            <h3>매일, 나도 모르게 완성되는 나의 특별한 일기.</h3>
+            <p>AI가 당신이 찍은 사진, 방문한 장소, 들었던 음악, 관심사 등을 분석하여 하루 일과를 스토리처럼 구성합니다. 당신은 단지 AI가 쓴 초안에 '한 줄의 감정'만 추가하면 됩니다.</p>
+            
+            <img src="[이미지 파일 경로]" alt="AI 일기 미리보기" style="max-width: 100%; height: auto; margin: 15px 0;">
+        </div>
+
+        <div class="section">
+            <h3>AI는 그저 '기록'을 넘어 '당신'을 이해합니다.</h3>
+            <p>AI는 단순히 데이터를 모으지 않습니다. 기록이 쌓일수록 당신의 감정 흐름, 습관 패턴, 성과 추이까지 분석하여 '성장 피드백'을 제공합니다. 이제 일기는 '과거의 기록'이 아닌, '미래를 만드는 도구'가 됩니다.</p>
+        </div>
+
+        <a href="https://open.kakao.com/o/sdIIOR3h" class="cta-button">
+            지금 바로 AI 자동 일기 앱 베타 테스트 참여하기!
+        </a>
+        <p style="margin-top: 15px; font-size: 0.9em;">* 귀하의 데이터는 안전하게 암호화되며, 테스트 참여 후 연락을 드립니다.</p>
+    </div>
+</body>
+</html>
