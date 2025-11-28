@@ -15,6 +15,15 @@
         .section { margin: 40px 0; padding: 20px 0; border-top: 1px solid #eee; text-align: left; }
         .section h3 { color: #4a77e5; }
     </style>
+    <!-- Google tag (gtag.js), 구글 애널리틱스-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSBNVEDY42"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-KSBNVEDY42');
+    </script>
 </head>
 <body>
     <div class="container">
