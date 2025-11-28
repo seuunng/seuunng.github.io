@@ -4,16 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 자동 일기 앱: 흘려보낸 하루를 빛나는 기록으로</title>
-    <style>
-        /* 기본 스타일 설정 (노션 페이지 느낌을 줍니다) */
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f7f9fc; color: #333; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: #4a77e5; margin-bottom: 10px; font-size: 2.5em; }
-        h2 { color: #555; margin-bottom: 30px; font-size: 1.2em; font-weight: normal; }
-        .cta-button { display: inline-block; background-color: #4a77e5; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 1.2em; margin-top: 20px; transition: background-color 0.3s; }
-        .cta-button:hover { background-color: #3b60c9; }
-        .section { margin: 40px 0; padding: 20px 0; border-top: 1px solid #eee; text-align: left; }
-        .section h3 { color: #4a77e5; }
+   <style>
+        /* 기본 스타일 및 반응형 디자인 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+            overflow-x: hidden; /* 가로 스크롤 방지 */
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .logo {
+            max-width: 150px; /* 로고 크기 조정 */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .main-hero {
+            position: relative;
+            width: 100%;
+            height: 600px; /* 메인 이미지 섹션 높이 */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white; /* 텍스트 색상 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 텍스트 그림자 */
+        }
+        .main-hero::before { /* 배경 이미지 오버레이 (텍스트 가독성 향상) */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('write_main.png') no-repeat center center/cover; /* 메인 이미지 경로 */
+            filter: brightness(0.7); /* 이미지 약간 어둡게 처리 */
+            z-index: -1;
+        }
+        .hero-content {
+            z-index: 1; /* 텍스트가 이미지 위에 오도록 */
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero-content h1 {
+            font-size: 2.8em; /* 헤드라인 크기 */
+            margin-bottom: 15px;
+            color: white; /* 텍스트 색상 */
+        }
+        .hero-content p {
+            font-size: 1.3em; /* 서브 카피 크기 */
+            margin-bottom: 25px;
+            color: white; /* 텍스트 색상 */
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50; /* 초록색 버튼 */
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px; /* 둥근 버튼 */
+            font-size: 1.4em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 60px auto; /* 섹션 간격 조정 */
+            padding: 0 20px;
+            text-align: left;
+        }
+        .section h3 {
+            color: #4a77e5;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .main-hero { height: 500px; }
+            .hero-content h1 { font-size: 2em; }
+            .hero-content p { font-size: 1em; }
+            .cta-button { padding: 12px 25px; font-size: 1.2em; }
+            .section h3 { font-size: 1.8em; }
+            .section p { font-size: 1em; }
+            .logo { max-width: 120px; }
+        }
+        @media (max-width: 480px) {
+            .main-hero { height: 400px; }
+            .hero-content h1 { font-size: 1.8em; }
+            .hero-content p { font-size: 0.9em; }
+            .cta-button { padding: 10px 20px; font-size: 1em; }
+            .section h3 { font-size: 1.5em; }
+        }
     </style>
     <!-- Google tag (gtag.js), 구글 애널리틱스-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSBNVEDY42"></script>
@@ -26,35 +128,24 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <h1>흘려보낸 하루가, 빛나는 나의 기록으로 돌아온다</h1>
-        <h2>AI가 당신의 하루를 기억하고, 단 한 줄의 노력으로 완벽한 일기를 완성해 드립니다.</h2>
-        
-        <a href="[여기에 Google Form 또는 Typeform 링크 삽입]" class="cta-button">
-            지금 바로 베타 테스터 신청하고, 나의 하루를 되찾으세요! (선착순 마감)
-        </a>
+    <header class="header">
+        <img src="ai_logo_black.png" alt="AI 일기 앱 로고" class="logo">
+    </header>
 
-        <div class="section">
-            <h3>더 이상 일기 쓰기를 미루지 마세요. 당신의 하루는 소중하니까요.</h3>
-            <p>피곤함, 깜빡 잊는 일, '무엇을 써야 할지' 모르는 막막함… 매번 작심삼일로 끝나는 일기 쓰기 때문에 소중한 기억을 잃고 있지는 않으신가요? 저희는 이 모든 어려움을 해결합니다.</p>
+    <div class="main-hero">
+        <div class="hero-content">
+            <h1>매일 나의 일상을 기록합니다, 예쁘고 편하게 AI가 알아서.</h1>
+            <p>매일 나의 일상을 기록합니다, 예쁘게.<br>매일 나의 일상을 기록합니다, 편하게.</p>
+            <a href="[여기에 Google Form 또는 Typeform 링크 삽입]" class="cta-button">
+                지금 바로 베타 테스터 신청하고, 나의 하루를 되찾으세요!
+            </a>
         </div>
-        
-        <div class="section">
-            <h3>매일, 나도 모르게 완성되는 나의 특별한 일기.</h3>
-            <p>AI가 당신이 찍은 사진, 방문한 장소, 들었던 음악, 관심사 등을 분석하여 하루 일과를 스토리처럼 구성합니다. 당신은 단지 AI가 쓴 초안에 '한 줄의 감정'만 추가하면 됩니다.</p>
-            
-            <img src="[이미지 파일 경로]" alt="AI 일기 미리보기" style="max-width: 100%; height: auto; margin: 15px 0;">
-        </div>
-
-        <div class="section">
-            <h3>AI는 그저 '기록'을 넘어 '당신'을 이해합니다.</h3>
-            <p>AI는 단순히 데이터를 모으지 않습니다. 기록이 쌓일수록 당신의 감정 흐름, 습관 패턴, 성과 추이까지 분석하여 '성장 피드백'을 제공합니다. 이제 일기는 '과거의 기록'이 아닌, '미래를 만드는 도구'가 됩니다.</p>
-        </div>
-
-        <a href="https://open.kakao.com/o/sdIIOR3h" class="cta-button">
-            지금 바로 AI 자동 일기 앱 베타 테스트 참여하기!
-        </a>
-        <p style="margin-top: 15px; font-size: 0.9em;">* 귀하의 데이터는 안전하게 암호화되며, 테스트 참여 후 연락을 드립니다.</p>
     </div>
-</body>
+
+    <div class="section">
+        <h3>더 이상 일기 쓰기를 미루지 마세요. 당신의 하루는 소중하니까요.</h3>
+        <p>피곤함, 깜빡 잊는 일, '무엇을 써야 할지' 모르는 막막함… 매번 작심삼일로 끝나는 일기 쓰기 때문에 소중한 기억을 잃고 있지는 않으신가요? 저희는 이 모든 어려움을 해결합니다.</p>
+    </div>
+
+    </body>
 </html>
